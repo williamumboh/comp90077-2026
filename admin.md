@@ -2,9 +2,11 @@
 
 ## Staff
 
-****Subject coordinator and lecturer****: William Umboh
+****Subject coordinator and lecturer****: [William
+Umboh](https://williamumboh.com)
 
-****Head tutor****: Xiao Sun
+****Head tutor****: [Xiao
+Sun](https://cis.unimelb.edu.au/research/computer-science/cs-graduate-researchers/computer-science/xiao-sun)
 
 ## Announcements
 
@@ -25,9 +27,11 @@ lecture.
 
 ::: {caution}
 
-Lecture slides will be designed as a presentation aid, not as study
-material. The notes and resources linked to will serve as study material
-instead.
+Lecture slides will be designed as a presentation aid to be used in
+tandem during the lecture or while watching the lecture recording, not
+as study material by itself. The slides may be unintelligible outside
+the context of the lecture. The notes and resources linked to will serve
+as study material instead.
 
 :::
 
@@ -41,27 +45,33 @@ contain problems for you to work on. You are expected to spend several
 hours each week working on the problems (see Workload below). Working
 together in groups is more fun and strongly encouraged.
 
-The aim of the tutorial is to get help from the tutor and from your
-peers if you are stuck and to get feedback on your solutions. The tutor
-will not provide a recap of the lecture material to the entire tutorial
-but can help you one-on-one if you need clarification on the lecture
-material. You are also encouraged to ask for clarification on the Ed
-forum. Solutions will be posted on Tuesday 12 pm after the conclusion of
-the last tutorial.
+The primary aim of the tutorial is to get feedback on your attempts from
+your peers and from the tutor. During the tutorial, you will mainly
+discuss your attempts with peers while the tutor walks around to provide
+help. Due to time limits, the tutor will not provide a recap of the
+lecture material to the entire tutorial but can help you one-on-one if
+you need clarification on the lecture material. You are also encouraged
+to ask for clarification on the Ed forum. The tutor will also not give a
+detailed walkthrough of the solutions. Solutions will be posted on
+Tuesday 12 pm after the conclusion of the last tutorial.
 
 ## Assessments
 
-There will be 2 written assignments and one mid-semester test. See
-@sec-schedule for the release and due dates.
+There will be 2 written assignments, 1 mid-semester test and 1 final
+exam. See @sec-schedule for the release and due dates.
 
-The mid-semester test will be 30 minutes on paper in-class. You will be
-allowed a handwritten cheat sheet, single-sided, A4 paper.
+****Mid-semester test**** The mid-semester test will be 30 minutes on
+paper in-class during week 7 lecture. You will be allowed a handwritten
+cheat sheet on one side of a sheet of A4 paper.
 
-Each assignment will involve creative problem-solving and reflection.
-You have the option to pair up with one other classmate of your choice
-and submit a single submission for the problem-solving component. If the
-pairing does not work out, you also have the option to submit separate
-submissions.
+****Final Exam**** The final exam will be 3 hours. You will be allowed a
+handwritten cheat sheet on both sides of a sheet of A4 paper.
+
+****Assignments**** Each assignment will involve creative
+problem-solving and reflection. You have the option to pair up with one
+other classmate of your choice and submit a single submission for the
+problem-solving component. If the pairing does not work out, you also
+have the option to submit separate submissions.
 
 ****Reflection**** Regardless of whether you pair up with someone else
 or not, you will need to submit your own reflection of the
@@ -72,18 +82,18 @@ consolidate learning and can often help you get unstuck (see e.g.
 debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)). In
 particular, the reflection component will require you to demonstrate
 your thinking process, how you (and possibly your partner) arrived at
-the solution presented, and what you think about the algorithm and
-analysis you presented, positives and negatives.
+the solution presented, and a critical self-evaluation of the algorithm
+and analysis you presented.
 
 The aim of the reflection component is to assess critical thinking and
 in particular, to reward submissions that are honest about their
 drawbacks over submissions that claim to have solved the problem but are
-actually incorrect. For example, you may think that your algorithm finds
-the optimal solution and your attempt at a correctness proof is complete
-except for some argument that you think should be true but are unable to
-flesh out. You may also write about the difficulties encountered in
-solving the problem in its full generality and how you are able to
-design an algorithm with a proof that it works under certain
+actually incorrect. For example, you may write that you think that your
+algorithm finds the optimal solution and your attempt at a correctness
+proof is complete except for some argument that you think should be true
+but are unable to flesh out. You may also write about the difficulties
+encountered in solving the problem in its full generality and how you
+are able to design an algorithm with a proof that it works under certain
 assumptions. More details about the reflection component will be
 discussed when the first assignment is released.
 
@@ -95,6 +105,9 @@ be used to understand an assignment only. No AI-generated text may
 appear in submissions, unless specified otherwise in the assignment.****
 
 :::
+
+****Hurdles**** There is a 50% hurdle on the assignments and 50% hurdle
+on the MST + final exam.
 
 ## Workload
 

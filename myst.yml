@@ -2,7 +2,7 @@
 version: 1
 project:
   id: efcb5b3d-05ec-4c30-bb57-3ce0934543f1
-  title: Advanced Algorithms and Data Structures
+  # title: Advanced Algorithms and Data Structures
   # description:
   # keywords: []
   authors:
@@ -18,6 +18,8 @@ project:
   toc:
     - file: welcome.md
     - file: admin.md
+    - file: background.md
+    - file: mst.md
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:
@@ -32,7 +34,7 @@ site:
   parts:
     footer: footer.md
   options:
-    logo_text: COMP90077 
+    logo_text: COMP90077
     robots: disallow
   # options:
   #   favicon: favicon.ico
