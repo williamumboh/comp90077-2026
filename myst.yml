@@ -1,0 +1,39 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: efcb5b3d-05ec-4c30-bb57-3ce0934543f1
+  title: Advanced Algorithms and Data Structures
+  # description:
+  # keywords: []
+  authors:
+    - name: William Umboh
+      affiliations:
+        - institution: The University of Melbourne
+  numbering:
+    title: true
+    heading_1 : true
+    heading_2 : true
+    heading_3 : true
+    prf:proof : false
+  toc:
+    - file: welcome.md
+    - file: admin.md
+  # github:
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  nav:
+    - title: Ed
+      url: https://edstem.org/au/courses/34455/discussion
+    - title: Canvas LMS
+      url: https://canvas.lms.unimelb.edu.au/courses/234977
+    - title: Gradescope
+      url: https://www.gradescope.com/courses/1272123
+  parts:
+    footer: footer.md
+  options:
+    logo_text: COMP90077 
+    robots: disallow
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
