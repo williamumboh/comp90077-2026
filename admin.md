@@ -21,7 +21,8 @@ correctness will be shown using mathematical proofs.
 ## Lecture slides and notes
 
 Lecture slides and notes will be posted on this website right before the
-lecture.
+lecture. The notes will contain all the details while the slides will be
+more brief.
 
 ## Tutorials
 
