@@ -73,11 +73,11 @@ drawbacks over submissions that claim to have solved the problem but are
 actually incorrect. For example, you may think that your algorithm finds
 the optimal solution and your attempt at a correctness proof is complete
 except for some argument that you think should be true but are unable to
-flesh out. You may also write about your difficulties about solving the
-problem in its full generality but are able to design an algorithm with
-a proof that it works under certain assumptions. More details about the
-reflection component will be discussed when the first assignment is
-released.
+flesh out. You may also write about the difficulties encountered in
+solving the problem in its full generality and how you are able to
+design an algorithm with a proof that it works under certain
+assumptions. More details about the reflection component will be
+discussed when the first assignment is released.
 
 ::: {attention}
 
