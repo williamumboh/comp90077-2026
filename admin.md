@@ -15,7 +15,8 @@ notifications from Ed.
 
 In this subject, we will focus on fundamental algorithmic ideas. We will
 not discuss coding and implementation issues in lectures, tutorials, and
-assessments. Algorithms will be specified using pseudocode.
+assessments. Algorithms will be specified using pseudocode and
+correctness will be shown using mathematical proofs.
 
 ## Lecture slides and notes
 
@@ -43,7 +44,7 @@ the last tutorial.
 ## Assessments
 
 There will be 2 written assignments and one mid-semester test. See
-@schedule for the release and due dates.
+@sec-schedule for the release and due dates.
 
 The mid-semester test will be 30 minutes on paper in-class. You will be
 allowed a handwritten cheat sheet, single-sided, A4 paper.
@@ -78,11 +79,14 @@ a proof that it works under certain assumptions. More details about the
 reflection component will be discussed when the first assignment is
 released.
 
-::: {attention} FEIT allows GenAI in open assessments unless an AI Use
-Statement says otherwise. For this subject, our AI Allowed Use Statement
-is: ****AI may be used to understand an assignment only. No AI-generated
-text may appear in submissions, unless specified otherwise in the
-assignment**** :::
+::: {attention}
+
+FEIT allows GenAI in open assessments unless an AI Use Statement says
+otherwise. For this subject, our AI Allowed Use Statement is: ****AI may
+be used to understand an assignment only. No AI-generated text may
+appear in submissions, unless specified otherwise in the assignment.****
+
+:::
 
 ## Workload
 
@@ -98,10 +102,15 @@ potential allocation of the self-study study time:
 
 ## Getting help
 
-For clarifications about the subject material, please post your
-questions on Ed. The staff regularly checks Ed on an almost-daily basis.
-You are also strongly encouraged to help out other students. Teaching
-others is the best way to learn the material.
+****Ed forum**** For clarifications about the subject material, please
+post your questions on Ed. The staff regularly checks Ed on an
+almost-daily basis. You are also strongly encouraged to help out other
+students. Teaching others is the best way to learn the material.
+
+****Office hours**** Starting from Week 2, I will be holding office
+hours on Fridays 3 - 4 pm in Melbourne Connect at the open area with
+whiteboards on Level 2. The official name of the area is 2209-Ngi-a
+djerring gat-ith (Open Project Space)
 
 Other resources you should be aware of:
 
