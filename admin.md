@@ -21,8 +21,15 @@ correctness will be shown using mathematical proofs.
 ## Lecture slides and notes
 
 Lecture slides and notes will be posted on this website right before the
-lecture. The notes will contain all the details while the slides will be
-more brief.
+lecture.
+
+::: {caution}
+
+Lecture slides will be designed as a presentation aid, not as study
+material. The notes and resources linked to will serve as study material
+instead.
+
+:::
 
 ## Tutorials
 
