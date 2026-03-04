@@ -46,7 +46,7 @@ The subject is divided roughly into 3 parts:
 
 | Weeks | Lecture | Assessment |
 |----|----|----|
-| W1: 2/3 - 6/3 | Administrivia, Minimum Spanning Trees |  |
+| W1: 2/3 - 6/3 | [Administrivia](./admin), Minimum Spanning Trees |  |
 | W2: 9/3 - 13/3 | Matroids | ****Mon tut rescheduled TBD due to public holiday**** |
 | W3: 16/3 - 20/3 | Greedy Approximation Algorithms | Assignment 1 released on Mar 16 |
 | W4: 23/3 - 27/3 | Submodular Functions | ****Assignment 1 deadline: Mar 29 17:00**** |
