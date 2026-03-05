@@ -44,18 +44,19 @@ The subject is divided roughly into 3 parts:
 
 # Schedule
 
-| Weeks | Lecture | Assessment |
+| Weeks | Lecture | Tasks |
 |----|----|----|
-| W1: 2/3 - 6/3 | [Administrivia](./admin), [Background](./background), [Minimum Spanning Trees](./mst), [Slides](./slides-w1.pdf) |  |
+| W1: 2/3 - 6/3 | [Administrivia](./admin), [Background](./background), [Minimum Spanning Trees](./mst), [Slides](./slides-w1.pdf), [Annotated Slides](./slides-post-w1.pdf) | [Tutorial 1](./tut1) |
 | W2: 9/3 - 13/3 | Matroids | ****Mon tut rescheduled TBD due to public holiday**** |
 | W3: 16/3 - 20/3 | Greedy Approximation Algorithms | Assignment 1 released on Mar 16 |
 | W4: 23/3 - 27/3 | Submodular Functions | ****Assignment 1 deadline: Mar 29 17:00**** |
-| W5: 30/3 - 3/4 | Linear Programming I |  |
+| W5: 30/3 - 3/4 | Matching and Vertex Cover |  |
 | Mid-semester break |  |  |
-| W6: 13/4 - 17/4 | Linear Programming II |  |
+| W6: 13/4 - 17/4 | Linear Programming I |  |
 | W7: 20/4 - 24/4 | ****Lecture replaced by MST**** | ****Mid-sem test during lecture**** |
-| W8: 4/5 - 8/5 | Linear Programming III |  |
-| W9: 11/5 - 15/5 | Online Algorithms I | Assignment 2 released on May 11 |
+| W8: 27/4 - 1/5 | Linear Programming II |  |
+| W9: 4/5 - 8/5 | Linear Programming III |  |
+| W10: 11/5 - 15/5 | Online Algorithms I | Assignment 2 released on May 11 |
 | W11: 18/5 - 22/5 | Online Algorithms II | ****Assignment 2 deadline: May 24 17:00**** |
 | W12: 25/5 - 29/5 | Online Algorithms III, Wrap Up |  |
 

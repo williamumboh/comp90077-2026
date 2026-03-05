@@ -20,6 +20,8 @@ project:
     - file: admin.md
     - file: background.md
     - file: mst.md
+    - file: tut1.md
+
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:

@@ -1,9 +1,11 @@
+(sec-MST)=
+
 # Minimum Spanning Trees
 
 We begin our journey by recalling the classic Minimum Spanning Tree
 problem.
 
-::: {prf:definition} Minimum Spanning Tree
+::: {prf:definition label=prob-MST} Minimum Spanning Tree
 
 In the Minimum Spanning Tree (MST) problem, we are given as input a
 graph $G = (V,E)$ and non-negative edge weights $w_e$ for each edge $e$.
@@ -87,45 +89,55 @@ and is thus a minimum spanning tree, proving @thm-kruskal.
 
 ::: {prf:lemma label=lem-Kruskal}
 
-In every iteration of the algorithm, there is a minimum spanning tree
-$T$ that contains $F$, and $T \setminus F$ is contained in $S$.
-Equivalently, every edge of $T$ that is not yet selected by the
-algorithm has not been discarded.
+Let $F_i$ and $S_i$ be $F$ and $S$, respectively, at the end of
+iteration $i$. For every iteration $i$ of the algorithm, there is a
+minimum spanning tree $T_i$ that satisfies the following properties:
+(prop-Kruskal)=
+
+1.  $T_i$ contains $F_i$;
+2.  $T_i \setminus F_i$ is contained in $S_i$. Equivalently, every edge
+    of $T$ that is not yet selected by the algorithm has not been
+    processed by the algorithm.
 
 :::
 
-::: {prf:proof enumerated=false}
+::: {prf:proof enumerated=false label=prf-lem-Kruskal}
 
-We prove the lemma statement by induction. At the start of the first
-iteration of the ****while**** loop, we have that $F = \emptyset$ and
-$S = E$, every minimum spanning tree $T$ satisfies the desired
-properties.
+We prove the lemma statement by induction on $i$. In the base case
+($i=0$), we have $F_0 = \emptyset$ and $S_0 = E$, and so we can choose
+$T_0$ to be any minimum spanning tree $T$.
 
-Next, suppose the statement holds at the start of iteration $i > 1$. We
-will show that it continues to hold at the end of the iteration.
-Consider $S$ and $F$ at the start of iteration $i$ and let $T$ be the
-minimum spanning tree that contains $F$ and $T \setminus F$ is contained
-in $S$.
+Next, suppose the statement holds for $i - 1$. We will show that
+[property 1](#prop-Kruskal) also holds for $i$. Let $e$ be the
+minimum-weight edge in $S_{i-1}$. If the algorithm discards $e$, then
+$F_i = F_{i-1}$ so choosing $T_i = T_{i-1}$ works. Suppose the algorithm
+adds $e$, i.e. $F_i = F_{i-1} \cup \{e\}$. If $e \in T_{i-1}$, then
+again, choosing $T_i = T_{i-1}$ works.
 
-If $F$ is spanning, then no edge is added to $F$ and the statement
-continues to hold at the end of the iteration. Suppose $F$ is not
-spanning. Let $e$ be the minimum-weight edge $e$ in $S$. If
-$F \cup \{e\}$ has a cycle, then no edge is added to $F$ as well.
+The only remaining case is then that $F_i = F_{i-1} \cup \{e\}$ and
+$e \notin T_{i-1}$. We now use @lem-greedy-swap to construct a new MST
+$T_i$ that satisfies the desired properties. @lem-greedy-swap implies
+that $T_{i-1} \cup \{e\}$ has exactly one cycle $C$ and removing any
+other edge from $T \cup \{e\}$ yields a spanning tree.
 
-The only remaining case is then that $F$ is not spanning and there is no
-cycle in $F \cup \{e\}$. If $e \in T$, then clearly the statement holds.
-Suppose $e \notin T$. Then, we need to show that there is a different
-minimum spanning tree $T'$ such that $T'$ contains $F \cup \{e\}$ and
-$T' \setminus F$ is contained in $S \setminus \{e\}$.
+Next, we show that there is an edge $f \in C$ that is not in $F_i$ and
+whose weight is at least that of $e$. This is where [property
+2](#prop-Kruskal) of $T_{i-1}$ guaranteed by the inductive hypothesis
+comes in handy. Since $F_i$ is acyclic, there is at least one edge in
+$C \setminus F_i$. By definition of $F_i$, we have
+$C \setminus F_i = C \setminus (F_{i-1} \cup \{e\})$. By definition of
+$C$, every edge of $C$ is in $T_{i-1}$, except $e$. Therefore
+$C \setminus F_i$ is contained in
+$T_{i-1} \setminus F_{i-1} \subseteq S_{i-1}$. Since $e$ is the
+minimum-weight edge of $S_{i-1}$, we get that every edge of
+$C \setminus F_i$ has weight at least $w_e$.
 
-By @lem-greedy-swap, we have that $T \cup \{e\}$ has exactly one cycle
-$C$ and removing any other edge from $T \cup \{e\}$ yields a spanning
-tree. Since the algorithm goes through $E$ in increasing order of
-weight, we have that every edge of $C \setminus (\{e\} \cup F)$ has
-weight at least that of $e$. Let $e'$ be one of those edges. Then,
-$T' = T \cup \{e\} \setminus \{e'\}$ is a spanning tree containing
-$F \cup \{e\}$. It is also a minimum spanning tree since its weight is
-at most that of $T$, which is a minimum spanning tree.
+Let $f$ be any edge in $C \setminus F_i$. Since $f$ is not in $F_i$ and
+has weight at least $w_e$, adding $e$ and removing $f$ from $T_{i-1}$
+yields a spanning tree $T_i$ whose total weight is at most that of
+$T_{i-1}$ and is thus also a MST. Moreover, $T_i$ contains $F_i$. The
+proof that $T_i \setminus F_i$ is contained in $S_i$ is left as a
+[tutorial exercise](#ex-prop2-Kruskal).
 
 :::
 
