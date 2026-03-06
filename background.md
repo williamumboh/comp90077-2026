@@ -6,9 +6,15 @@ Refer to this section for a refresher on notation and terminology that
 will be heavily used throughout. We assume that you have either seen
 them before in other subjects or are able to spend extra time to quickly
 get comfortable with them. For more detailed discussion, see the
-relevant sections of [Discrete Math
-Background](https://complexityincs.com/discrete-math.pdf) by Thomas
-Watson.
+relevant sections of:
+
+- [Discrete Math
+  Background](https://complexityincs.com/discrete-math.pdf) by Thomas
+  Watson;
+- [Mathematics for Computer
+  Science](https://courses.csail.mit.edu/6.042/spring18/mcs.pdf) by Eric
+  Lehman, F. Thomson Leighton, and Albert R. Meyer ([lecture
+  slides](https://opencw.aprende.org/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/lecture-slides/)).
 
 (sec-background-graphs)=
 
@@ -23,6 +29,13 @@ Given an edge $e = (u,v)$, we say that vertices $u$ and $v$ are
 $e$ if $u$ is an endpoint of $e$, and vice versa. We also say that $u$
 is incident to a subset $F$ of edges if it is incident to one of them.
 
+Intuitively, a path lets us go from one vertex to another by following
+edges, and a cycle has an additional edge that lets us go back to the
+first vertex. Formally, a *path* $P$ is a sequence of distinct vertices
+$v_1, v_2, \ldots, v_k$ for some $k > 1$ with edges
+$(v_1,v_2), (v_2, v_3), \ldots, (v_{k-1}, v_k)$. A *cycle* consists of a
+path an additional edge $(v_k, v_1)$ that closes the path.
+
 Let $F$ be a subset of edges. We say that $F$ *connects* vertices $u$
 and $v$ if $F$ contains a path between $u$ and $v$, and *spans* a subset
 of vertices $X$ if it connects all vertices of $X$. Moreover, we say
@@ -31,13 +44,13 @@ that $F$ is:
 - *spanning* if it connects all of $V$;
 - *acyclic* if it contains no cycles;
 - *connected* if for every pair of vertices $u$ and $v$ that are
-  incident to $F$;
+  incident to $F$, there is a $u$-$v$ path contained in $F$;
 - a *forest* if it is acyclic;
 - a *tree* if it is connected ****and**** acyclic;
 
 Let $X$ be a subset of vertices. We say that $X$ is a *connected
-component* of $G$ if $E$ spans $X$ and there is no other vertex $v$ such
-that $E$ spans $X \cup \{v\}$ as well.
+component* (or *component*) of $G$ if $E$ spans $X$ and there is no
+other vertex $v$ such that $E$ spans $X \cup \{v\}$ as well.
 
 (sec-background-sets)=
 

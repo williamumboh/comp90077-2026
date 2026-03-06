@@ -147,7 +147,8 @@ The majority of this subject concerns problems that are NP-hard and for
 which we are happy to settle with polynomial time algorithms with
 approximation guarantees. We will define approximation guarantees later
 on. The point is that in this subject, we are content with running time
-analyses that show the algorithm is polynomial time.
+analyses that show the algorithm is polynomial time. We will not worry
+about optimizing the algorithm and analysis to get better polynomials.
 
 ::: {prf:theorem}
 
@@ -162,16 +163,66 @@ the loop removes one edge from $S$, which initially has all $m$ edges.
 Thus, there are at most $m$ iterations.
 
 Next, let us analyze the time complexity of each iteration. There are
-two steps. The first step is finding the minimum-weight edge $e$ in $S$
-and removing it from $S$; each of these can be done in $O(m)$ time by
-going through all of $S$. The second step involves checking if
-$F \cup \{e\}$ has a cycle. This can be done by doing say, a depth-first
-search, which takes $O(m)$ time. Adding $e$ to $F$ also takes $O(m)$
-time. Finally, we need to check if $S$ is empty ($O(1)$ time) and if $F$
-is spanning (can be done with say, breadth-first search, which takes
-$O(m)$ time). Thus, the time complexity of each iteration is $O(m)$.
+three steps. The first step is to check if $S$ is empty ($O(1)$ time)
+and if $F$ is spanning (can be done with say, breadth-first search,
+which takes $O(m)$ time). The second step involves finding the
+minimum-weight edge $e$ in $S$ and removing it from $S$; each of these
+can be done in $O(m)$ time by going through all of $S$. Finally, we need
+to check if $F \cup \{e\}$ has a cycle. This can be done by doing say, a
+depth-first search, which takes $O(m)$ time. Adding $e$ to $F$ also
+takes $O(m)$ time. Thus, the time complexity of each iteration is
+$O(m)$.
 
 Therefore, the total running time is $O(m) + O(m^2)$, which is
 polynomial time.
 
 :::
+
+## Improving running time to $O(m \log m)$
+
+We mention two improvements to get the running time down to
+$O(m \log m)$:
+
+1.  Checking if $F$ is spanning can be done in $O(1)$ time by keeping a
+    count of the number of edges in $F$. This uses the fact that the
+    algorithm maintains the invariant that $F$ is acyclic and an acyclic
+    subgraph is spanning if and only if it has $n-1$ edges.
+2.  Checking if adding an edge $e$ to $F$ can also be sped up by using a
+    [disjoint-set data
+    structure](https://en.wikipedia.org/wiki/Disjoint-set_data_structure).
+    The key idea is that since $F$ is acyclic, adding $e$ to $F$ creates
+    a cycle if and only if the two endpoints of $e$ are in the same
+    connected component of $F$. Thus, it suffices to maintain a data
+    structure that keeps track of the connected components of $F$, which
+    is what the disjoint-set data structure lets us do.
+
+::: {exercise label=ex-MST-size}
+
+Prove that an acyclic subgraph is spanning if and only if it has $n-1$
+edges.
+
+:::
+
+::: {exercise label=ex-MST-comp-cycle}
+
+Prove that adding an edge $e = (u,v)$ to an acyclic subgraph of $F$
+creates a cycle if and only if $u$ and $v$ are in the same component of
+$F$.
+
+:::
+
+::: {note}
+
+The disjoint-set data structure is outside the scope of the subject and
+not assessable. @ex-MST-size and @ex-MST-comp-cycle are assessable.
+
+:::
+
+## Even faster? (Not assessable)
+
+In reply to a question asked during the lecture, I guessed that it is
+not possible to do better than $O(m \log m)$. This turned out to be
+wrong. There is an almost-linear time algorithm and a randomized
+linear-time algorithm. See
+[Wikipedia](https://en.wikipedia.org/wiki/Minimum_spanning_tree#Faster_algorithms)
+for details.
