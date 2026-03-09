@@ -104,8 +104,8 @@ minimum spanning tree $T_i$ that satisfies the following properties:
 ::: {prf:proof enumerated=false label=prf-lem-Kruskal}
 
 We prove the lemma statement by induction on $i$. In the base case
-($i=0$), we have $F_0 = \emptyset$ and $S_0 = E$, and so we can choose
-$T_0$ to be any minimum spanning tree $T$.
+($i=0$)[^1], we have $F_0 = \emptyset$ and $S_0 = E$, and so we can
+choose $T_0$ to be any minimum spanning tree $T$.
 
 Next, suppose the statement holds for $i - 1$. We will show that
 [property 1](#prop-Kruskal) also holds for $i$. Let $e$ be the
@@ -226,3 +226,7 @@ wrong. There is an almost-linear time algorithm and a randomized
 linear-time algorithm. See
 [Wikipedia](https://en.wikipedia.org/wiki/Minimum_spanning_tree#Faster_algorithms)
 for details.
+
+[^1]: The convention in algorithms is to refer to iteration $i=1$ as the
+    first iteration, so $F_0$ and $S_0$ refers to $F$ and $S$ during
+    initialization.
