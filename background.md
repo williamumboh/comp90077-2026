@@ -67,10 +67,16 @@ In the following, let $S$ and $T$ be sets.
   the *intersection* of $S$ and $T$
 - $S \cup T$ is the set of elements in $S$ **or** $T$, and is called the
   *union* of $S$ and $T$
-- $S \subseteq S$ means $S$ is a subset of $T$, i.e. every element of
-  $S$ is an element of $T$
+- $S \subseteq T$ means $S$ is a subset of $T$, i.e. every element of
+  $S$ is an element of $T$; we also say that $S$ is *contained in* $T$.
+  Moreover, we say that $S$ is a *proper subset* of $T$ (or $S$ is
+  *properly contained in* $T$) if $S$ is contained in $T$ and $T$
+  contains some element not in $S$; this is written as $S \subsetneq T$.
 - $S \supseteq T$ means $S$ is a superset of $T$, i.e. every element of
-  $S$ is an element of $T$
+  $T$ is an element of $S$; we also say that $S$ *contains* $T$.
+  Similarly, we say that $S$ is a *proper superset* of $T$ (or $S$
+  *properly contains* $T$) if $S$ contains $T$ and $S$ contains some
+  element not in $T$; this is written as $S \supsetneq T$.
 - $2^S$ is the set containing every subset of $S$ (including $\emptyset$
   and $S$), and is called the *powerset* of $S$. Sometimes, it is
   denoted by $\mathcal{P}(S)$.
