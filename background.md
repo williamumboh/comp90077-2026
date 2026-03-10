@@ -31,10 +31,11 @@ is incident to a subset $F$ of edges if it is incident to one of them.
 
 Intuitively, a path lets us go from one vertex to another by following
 edges, and a cycle has an additional edge that lets us go back to the
-first vertex. Formally, a *path* $P$ is a sequence of distinct vertices
-$v_1, v_2, \ldots, v_k$ for some $k > 1$ with edges
-$(v_1,v_2), (v_2, v_3), \ldots, (v_{k-1}, v_k)$. A *cycle* consists of a
-path an additional edge $(v_k, v_1)$ that closes the path.
+first vertex. Formally, a *path* $P$ consists of a sequence of distinct
+vertices $v_1, v_2, \ldots, v_k$ for some $k > 1$ and edges
+$(v_1,v_2), (v_2, v_3), \ldots, (v_{k-1}, v_k)$. We also use $P$ to
+denote the set of edges on the path. A *cycle* consists of a path plus
+an additional edge $(v_k, v_1)$ that closes the path.
 
 Let $F$ be a subset of edges. We say that $F$ *connects* vertices $u$
 and $v$ if $F$ contains a path between $u$ and $v$, and *spans* a subset
