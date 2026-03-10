@@ -19,7 +19,7 @@ Show that $T_i \setminus F_i$ is contained in $S_i$.
 
 :::
 
-::: {prf:proof class=dropdown}
+::: {solution class=dropdown} ex-prop2-Kruskal
 
 Let $e$ be the smallest edge in $S_{i-1}$. Note that
 $S_i = S_{i-1} \setminus \{e\}$.
@@ -74,7 +74,7 @@ that $F_2 \cup \{e\}$ is also acyclic.
 
 :::
 
-::: {prf:proof class=dropdown}
+::: {solution class=dropdown} ex-1-2
 
 Consider the set of connected components of $F_2$. We claim that there
 is at least one edge $e$ of $F_1$ that connects two connected
@@ -107,7 +107,7 @@ What can you do with an edge in $F_1 \setminus F_2$?
 
 :::
 
-::: {exercise}
+::: {exercise label=ex-1-3}
 
 In the example MST input shown in Lecture 1 (graph on the left of page
 15 of [Lecture 1 slides](./slides-wk1.pdf)), there is more than 1 MST
@@ -124,7 +124,7 @@ Use [Greedy Swap Lemma](#lem-greedy-swap).
 
 :::
 
-::: {prf:proof class=dropdown}
+::: {solution class=dropdown} ex-1-3
 
 It's easier to prove the contrapositive: if there are two MSTs, then
 there are at least two edges with the same weight. Let $T$ and $T'$ be
