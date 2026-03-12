@@ -17,6 +17,7 @@ project:
     - file: background.md
     - file: mst.md
     - file: tut1.md
+    - file: matroids.md
 
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"

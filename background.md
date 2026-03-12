@@ -109,3 +109,16 @@ See also [CS103 Guide to
 Proofs](https://web.stanford.edu/class/cs103/guide_to_proofs_on_discrete_structures#writing-longer-proofs)
 and Section 1.3.2 of [Introduction to Theoretical Computer
 Science](https://introtcs.org/public/lec_00_1_math_background.html).
+
+## Proofs
+
+(sec-iff)=
+
+### Proving if and only if statements
+
+There are 3 ways to prove a statement of the form "$A$ if and only if
+$B$":
+
+1.  Prove "If $A$, then $B$" and "If $B$, then $A$";
+2.  Prove "If $A$, then $B$" and "If not $A$, then not $B$";
+3.  Prove "If $B$, then $A$" and "If not $B$, then not $A$".
