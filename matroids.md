@@ -44,7 +44,7 @@ $S$, and $\mathcal{F}$ is the set of spanning trees.
 
 :::
 
-Thus, we can restate @thm-kruskal as follows
+Thus, we can restate @thm-kruskal as follows.
 
 ::: {prf:theorem}
 
@@ -136,14 +136,14 @@ Observe that $M_G$ indeed satisfies the 3 matroid properties:
 - The augmentation property is proved in @ex-1-2.
 
 Next, we define the analog of spanning trees. An independent set $B$ is
-called a *basis* if there is no independent set $B'$ that contains $B$
-and $|B'| > |B|$. The *rank* of a subset $S$ of the ground set is the
-size of the largest independent set contained in $S$, and is denoted by
-$r(S)$. The *rank* of the matroid is $r(E)$, the size of the largest
-independent set. Let $T$ be a subset of the ground set, and $S$ be an
-independent set contained in $T$. Then, $S$ is said to be a *maximally
-independent subset* of $T$ if there is no independent set $S'$ such that
-$S \subsetneq S' \subseteq T$.
+called a *basis* if it is maximally independent, i.e. there is no
+independent set $B'$ that contains $B$ and $|B'| > |B|$. The *rank* of a
+subset $S$ of the ground set is the size of the largest independent set
+contained in $S$, and is denoted by $r(S)$. The *rank* of the matroid is
+$r(E)$, the size of the largest independent set. Let $T$ be a subset of
+the ground set, and $S$ be an independent set contained in $T$. Then,
+$S$ is said to be a *maximally independent subset* of $T$ if there is no
+independent set $S'$ such that $S \subsetneq S' \subseteq T$.
 
 ::: {prf:example} Bases in Graphical Matroids
 
@@ -173,16 +173,9 @@ maximally independent subset of $T$.
 :::
 
 Finally, we consider the analog of cycles. A subset $S$ that is not
-independent is called *dependent* and is called a *circuit* if it has no
-proper subset that is also dependent. The following observation is
-immediately implied by the definition of circuits and is very useful.
-
-::: {prf:observation}
-
-A set $S$ is a circuit if and only if removing any element from $S$
-yields an independent set.
-
-:::
+independent is called *dependent* and is called a *circuit* if it is
+minimally dependent, i.e. it has no proper subset that is also
+dependent.
 
 ::: {prf:example} Circuits in Graphical Matroids
 
@@ -192,18 +185,29 @@ to a cycle in $G$.
 
 :::
 
+The following observation about bases and circuits follow immediately
+from their definition and is useful.
+
+::: {prf:observation}
+
+An independent set $S$ is a basis if and only if adding any element to
+$S$ makes it dependent. A dependent set $S$ is a circuit if and only if
+removing any element from $S$ yields an independent set.
+
+:::
+
 ## Examples of Matroids
 
 The simplest matroid is a uniform matroid.
 
-::: {prf:definition} Uniform Matroid
+::: {prf:definition label=unif-matroid} Uniform Matroid
 
 A uniform matroid is specified by a ground set $E$ and a non-negative
 integer $k$. A set $S$ is independent if $|S| \leq k$.
 
 :::
 
-::: {prf:definition} Partition Matroid
+::: {prf:definition label=part-matroid} Partition Matroid
 
 A partition matroid is specified by a ground set $E$, a partition of the
 ground set into parts $E_1, \ldots, E_m$, and a non-negative integer
@@ -258,8 +262,7 @@ independence.
 
 Henceforth, we use $w(S)$ to mean $\sum_{e \in S} w_e$.
 
-::: {prf:theorem label=thm-greedy-matroid} Greedy Optimality for
-Matroids
+::: {prf:theorem label=thm-greedy-matroid} Greedy Optimality
 
 Let $M$ be a matroid. Then, for every weight function $w$ on the
 elements of $M$, the [greedy algorithm](#alg-matroid-greedy) finds the
@@ -364,13 +367,22 @@ $\Omega(n)$.
 @thm-greedy-matroid and @thm-greedy-indep give a powerful
 characterization of matroids in terms of greedy.
 
-::: {prf:theorem} Greedy Characterization of Matroids
+::: {prf:theorem label=thm-matroids} Greedy Characterization of Matroids
 
 Let $M$ be an independence system. @alg-matroid-greedy finds the
 max-weight independent set for every weight function $w$ if and only if
 $M$ is a [matroid](#def-matroid).
 
 :::
+
+How do we use this Theorem? We can use it in 2 ways:
+
+1.  To show that @alg-matroid-greedy works for an independence system
+    $M$, it suffices to show that $M$ is a matroid, i.e. it satisfies
+    the augmentation property.
+2.  To show that @alg-matroid-greedy does not work for $M$, it suffices
+    to show that $M$ is not a matroid, i.e. it does not satisfy the
+    augmentation property.
 
 ## Application: Scheduling with Deadlines
 
@@ -379,14 +391,14 @@ problem](#def-comb), we need to show that the feasible sets of the
 problem form a [matroid](#def-matroid). Let us see this in action for
 the following scheduling problem.
 
-::: {prf:definition} Scheduling with Deadlines
+::: {prf:definition label=prob-sched-deadlines} Scheduling w/ Deadlines
 
 We are given a set of $n$ jobs labeled $1, \ldots, n$. Every job
 requires one day of processing time. Each job $j$ has a positive integer
 deadline $1 \leq d_j \leq n$ and a non-negative profit $p(j)$ that is
 earned if $j$ is completed by the end of day $d_j$. The goal is to
-decide in which order to perform the jobs to maximize the total profit
-earned.
+schedule the jobs, i.e. decide in which order to perform the jobs, to
+maximize the total profit earned.
 
 :::
 
@@ -415,10 +427,9 @@ max-profit ordering of jobs, we can instead solve the equivalent problem
 of finding a max-profit subset of jobs that is feasible.
 
 Our goal is to show that the feasible subsets of jobs form a matroid.
-First, we prove some structural properties of feasible subsets.
+First, we prove a characterization of feasible subsets.
 
-::: {prf:lemma label=lem-feasible-jobs} Characterization of Feasible
-Subsets
+::: {prf:lemma label=lem-feasible-jobs} Characterization of Feasibility
 
 Let $S$ be a set of jobs and $S(t)$ be the subset of jobs $j \in S$ with
 deadline $d_j \leq t$. We have that $S$ is feasible if and only if
@@ -426,22 +437,28 @@ $|S(t)| \leq t$ for every $t$.
 
 :::
 
-::: {prf:proof enumerated=false}
+:::::: {prf:proof enumerated=false}
 
-In this proof, we use the [3rd approach for proving if and only if
-statements](#sec-iff).
-
-If $|S(t)| > t$ for some $t$, then no matter how we order the jobs, at
-least one job will finish on day $t+1$.
+Suppose $|S(t)| > t$ for some $t$. Then no matter how we order the jobs,
+at least one job $j \in S(t)$ will finish on day $t+1$. Since every job
+in $S(t)$ has deadline at most $t$, there is some job that cannot be
+completed on time. Thus, $S$ is not feasible.
 
 Suppose $|S(t)| \leq t$ for every $t$. Schedule $S$ in increasing order
 of deadlines and order the remaining jobs arbitrarily after the last job
 in $S$. Each job $j \in S$ is completed by the end of day $|S(d_j)|$ and
 so is completed on time since $|S(d_j)| \leq d_j$.
 
+::::::
+
+::: {aside}
+
+In this proof, we use the [3rd approach for proving if and only if
+statements](#sec-iff).
+
 :::
 
-::: {prf:lemma}
+::: {prf:lemma label=lem-sched-matroid}
 
 The feasible subsets of jobs form a matroid.
 
@@ -457,25 +474,37 @@ downwards-closed properties](#def-matroid) of matroids.
 
 It remains to prove that $\mathcal{F}$ satisfies the augmentation
 property. Let $R$ and $S$ be two feasible subsets such that $|R| > |S|$.
+We need to find a job $j \in R \setminus S$ such that $S \cup \{j\}$ is
+feasible.
+
 Let $t^*$ be the latest day such that $|R(t^*)| \leq |S(t^*)|$. Such a
-day exists since $|R(0)|=0=|S(0)|$ and $|R(n)| = |R| > |S| = |S(n)|$.
+day exists since $$|R(0)|=0=|S(0)|$$ and
+$$|R(n)| = |R| > |S| = |S(n)|.$$ Observe that $|R(t)| > |S(t)|$ for
+every $t>t^*$. Thus, we have $|R(t^*+1)| > |S(t^*+1)|$ and so there is a
+job $j^* \in R(t^*) \setminus S(t^*)$ whose deadline is $t^* + 1$. We
+now show that $S' = S \cup \{j^*\}$ is feasible. By @lem-feasible-jobs,
+it suffices to show that $|S'(t)| \leq t$ for every $t$.
 
-By definition of $t^*$, we have $|R(t^*)| > |S(t^*)|$ and so there is a
-job $j^* \in R(t^*) \setminus S(t^*)$ such that $d_j = t^* + 1$. We now
-show that $S' = S \cup \{j^*\}$ is feasible. By @lem-feasible-jobs, it
-suffices to show that $|S'(t)| \leq t$ for every $t$.
-
-Case 1 ($t \leq t^*$). We have that $S'(t) = S(t)$ since the new job
-$j^*$ has deadline $t^* > t$ and so is not in $S(t)$; thus
+****Case 1 ($t \leq t^*$).**** We have that $S'(t) = S(t)$ since the new
+job $j^*$ has deadline $t^* > t$ and so is not in $S(t)$; thus
 $|S'(t)| \leq t$ by feasibility of $S$.
 
-Case 2 ($t \geq t^*$). By definition of $t^*$, we have
-$|S(t)| < |R(t)|$. Thus, $|S'(t)| = |S(t)| + 1 \leq |R(t)| \leq t$
+****Case 2 ($t > t^*$).**** As argued above, we have $|S(t)| < |R(t)|$
+when $t > t^*$. Thus, $$|S'(t)| = |S(t)| + 1 \leq |R(t)| \leq t$$
 because $R$ is feasible.
 
-Thus, $S'$ is feasible. We have now proved that $\mathcal{F}$ satisfies
-the augmentation property and we conclude that $\mathcal{F}$ is a
-matroid.
+Therefore, $S'$ is feasible. We have now proved that $\mathcal{F}$
+satisfies the augmentation property and we conclude that $\mathcal{F}$
+is a matroid.
+
+:::
+
+@lem-sched-matroid and @thm-matroids now imply the following theorem.
+
+::: {prf:theorem}
+
+There is a polynomial-time algorithm that finds the optimal ordering of
+jobs for every instance of the Scheduling with Deadlines Problem.
 
 :::
 

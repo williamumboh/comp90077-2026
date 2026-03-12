@@ -1,3 +1,5 @@
+(sec-tut1)=
+
 # Tutorial 1: MSTs
 
 This tutorial is all about the [Minimum Spanning Tree
@@ -76,20 +78,17 @@ that $F_2 \cup \{e\}$ is also acyclic.
 
 ::: {solution class=dropdown} ex-1-2
 
-Consider the set of connected components of $F_2$. We claim that there
-is at least one edge $e$ of $F_1$ that connects two connected
-components. Adding such an edge to $F_2$ does not create cycles and so
-we are done.
+First, observe that if an edge subset $H$ is acyclic, then the number of
+connected components of $H$ (an isolated vertex is considered a
+connected component by itself) is exactly $n - |H|$.[^1]
 
-To prove the claim, let $C_i$ be the $i$-th component of $F_2$ and $T_i$
-be the edges of $F_2$ that connect $C_i$. Observe that every edge of
-$F_2$ belongs to $T_i$ for exactly one $i$. Let $F_1(C_i)$ be the edges
-of $F_1$ where both endpoints are in $C_i$. If every edge of $F_1$
-connects two vertices of the same component of $F_2$, then since
-$|F_1| > |F_2|$, there exists $i$ such that $|F_1(C_i)| > |T_i|$. But
-since $T_i$ is a spanning tree on $C_i$, that means that $F_1(C_i)$
-contains a cycle. However, that cannot happen since $F_1$ is acyclic.
-Thus, some edge of $F_1$ connects two components of $F_2$, as desired.
+Since $|F_1| > |F_2|$, the number of connected components of $F_1$ is
+less than that of $F_2$. Moreover, the set of connected components
+partition the vertex set, and so there must be a connected component of
+$F_1$ that contains two vertices $u,v$ that are in different components
+of $F_2$. Thus, the path between $u$ and $v$ in $F_1$ must contain an
+edge $e$ that connects the two components of $F_2$ containing $u$ and
+$v$. Therefore, adding $e$ to $F_2$ does not create a cycle.
 
 :::
 
@@ -144,3 +143,7 @@ that is contained in exactly one of $T$ and $T'$, we get that
 $w_{f'} \geq w_e$. Thus, $w_{f'} = w_e$.
 
 :::
+
+[^1]: Imagine adding the edges of $H$ to an empty graph one at a time.
+    Each edge that is added connects two connected components
+    (otherwise, it would create a cycle).
