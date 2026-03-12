@@ -17,7 +17,7 @@ A combinatorial optimization problem consists of:
 - a finite set of elements $E$;
 - an *objective function* $g : 2^E \rightarrow \mathbb{R}$ (i.e. $g$ is
   a function that maps subsets of $E$ to real numbers);
-- a collection $\mathcal{F} \subseteq 2^E$ of subsets of \$E. The sets
+- a collection $\mathcal{F} \subseteq 2^E$ of subsets of $E$. The sets
   in $\mathcal{F}$ are called *feasible sets*.
 
 The goal is to find a feasible set $S \in \mathcal{F}$ that maximizes or
