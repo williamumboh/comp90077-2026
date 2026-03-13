@@ -277,7 +277,7 @@ then the greedy algorithm takes $O(n \log n + n\cdot g(n))$ time.
 
 :::
 
-::: {prf:proof enumerated=false}
+::: {prf:proof enumerated=false label=prf-greedy-matroid}
 
 Let $B$ be the output of the greedy algorithm and $T$ be a
 maximum-weight basis.

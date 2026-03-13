@@ -13,26 +13,22 @@ matroid](#part-matroid) satisfy the augmentation property.
 
 Convince yourself that when the [greedy algorithm for
 matroids](#alg-matroid-greedy) is applied to graphical matroids, it is
-exactly [Kruskal's algorithm](#alg-Kruskal), and that its proof of
-correctness can be easily modified[^1] to give a proof of correctness
-for Kruskal's.
+exactly [Kruskal's algorithm](#alg-Kruskal), and that its [proof of
+correctness](#prf-greedy-matroid) can be easily modified[^1] to give a
+proof of correctness for Kruskal's.
 
 :::
 
 ::: {exercise}
 
-Consider an instance of the Max-Weight Basis Problem with matroid
-$M = (E, \mathcal{I})$ and weight function $w$. Suppose you ask \<insert
-your favorite LLM\> to give you a max-weight basis. After a while, it
-returns a subset $S \subseteq E$. Being the savvy person that you are,
-you want to check if $S$ is a max-weight basis and you want to do so
-using only $O(n)$ time, assuming checking independence takes $O(1)$
-time.[^2]
+Consider matroid $M = (E, \mathcal{I})$. Suppose you ask \<insert your
+favorite LLM\> to give you a basis. After a while, it returns a subset
+$S \subseteq E$. Being the savvy person that you are, you want to check
+if $S$ is a basis and you want to do so using only $O(n)$ time, assuming
+checking independence takes $O(1)$ time.
 
-1.  (Warm up) Show that checking if $S$ is a basis can be done in $O(n)$
-    time.
-2.  Show that checking if $S$ is a max-weight basis can be done in
-    $O(n)$ time.
+Your task is to show that checking if $S$ is a basis can be done in
+$O(n)$ time.
 
 :::
 
@@ -73,7 +69,3 @@ basis problem.
 
 [^1]: For example, by substituting the matroid terms with the
     appropriate graph terms.
-
-[^2]: If you take $O(n \log n)$ time, then you might as well run the
-    greedy algorithm for matroids yourself, which defeats the purpose of
-    asking the LLM.
