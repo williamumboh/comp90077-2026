@@ -103,13 +103,17 @@ properties of an independence system](#def-indep).
 
 ## Matroids
 
-Matroids are independent systems with an additional property.
+Matroids are independent systems with an additional *augmentation*
+property.
 
 ::: {prf:definition label=def-matroid} Matroids
 
-An independence system $M$ is a *matroid* if it also satisfies the
-following property:
+A *matroid* $M = (E, \mathcal{I})$ satisfies the following properties:
 
+- ****Empty set:**** The empty set is independent, i.e.
+  $\emptyset \in \mathcal{I}$.
+- ****Downwards-closed:**** If $S$ is independent, then every subset of
+  $S$ is also independent.
 - ****Augmentation:**** If $S$ and $T$ are independent and $|S| > |T|$,
   then there is an element $e \in S \setminus T$ such that
   $T \cup \{e\}$ is also independent.
@@ -133,7 +137,8 @@ Observe that $M_G$ indeed satisfies the 3 matroid properties:
 - The empty subgraph does not contain a cycle.
 - If a subgraph does not contain a cycle, then any subset of it does not
   contain a cycle either.
-- The augmentation property is proved in @ex-1-2.
+- The augmentation property is proved in [Tutorial 1 Exercise
+  2](#ex-1-2).
 
 Next, we define the analog of spanning trees. An independent set $B$ is
 called a *basis* if it is maximally independent, i.e. there is no
@@ -173,9 +178,9 @@ maximally independent subset of $T$.
 :::
 
 Finally, we consider the analog of cycles. A subset $S$ that is not
-independent is called *dependent* and is called a *circuit* if it is
-minimally dependent, i.e. it has no proper subset that is also
-dependent.
+independent is called *(drum roll)* *dependent* and is called a
+*circuit* if it is minimally dependent, i.e. it has no proper subset
+that is also dependent.
 
 ::: {prf:example} Circuits in Graphical Matroids
 
@@ -466,11 +471,10 @@ The feasible subsets of jobs form a matroid.
 
 ::: {prf:proof enumerated=false}
 
-Let $\mathcal{F}$ be the collection of feasible subsets of jobs.
-
-The characterization of feasible subsets (@lem-feasible-jobs)
-immediately implies that $\mathcal{F}$ satisfies the [empty set and
-downwards-closed properties](#def-matroid) of matroids.
+Let $\mathcal{F}$ be the collection of feasible subsets of jobs. The
+characterization of feasible subsets (@lem-feasible-jobs) immediately
+implies that $\mathcal{F}$ satisfies the [empty set and downwards-closed
+properties](#def-matroid) of matroids.
 
 It remains to prove that $\mathcal{F}$ satisfies the augmentation
 property. Let $R$ and $S$ be two feasible subsets such that $|R| > |S|$.
@@ -481,9 +485,10 @@ Let $t^*$ be the latest day such that $|R(t^*)| \leq |S(t^*)|$. Such a
 day exists since $$|R(0)|=0=|S(0)|$$ and
 $$|R(n)| = |R| > |S| = |S(n)|.$$ Observe that $|R(t)| > |S(t)|$ for
 every $t>t^*$. Thus, we have $|R(t^*+1)| > |S(t^*+1)|$ and so there is a
-job $j^* \in R(t^*) \setminus S(t^*)$ whose deadline is $t^* + 1$. We
-now show that $S' = S \cup \{j^*\}$ is feasible. By @lem-feasible-jobs,
-it suffices to show that $|S'(t)| \leq t$ for every $t$.
+job $j^* \in R(t^*+1) \setminus S(t^*+1)$ whose deadline
+$d_{j^*} = t^* + 1$. We now show that $S' = S \cup \{j^*\}$ is feasible.
+By @lem-feasible-jobs, it suffices to show that $|S'(t)| \leq t$ for
+every $t$.
 
 ****Case 1 ($t \leq t^*$).**** We have that $S'(t) = S(t)$ since the new
 job $j^*$ has deadline $t^* > t$ and so is not in $S(t)$; thus
