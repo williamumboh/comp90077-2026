@@ -90,6 +90,8 @@ In the following, let $S$ and $T$ be sets.
     $S$.
   - Sometimes, : is used in place of $\mid$. For example,
     $\{x \in S : x \text{ is even}\}$
+- If $S$ is a subset of $T$, then the *complement* is $S \setminus T$,
+  the elements of $T$ not in $S$.
 
 For a more in-depth and beginner-friendly discussion see also [Guide to
 Elements and

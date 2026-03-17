@@ -193,7 +193,7 @@ to a cycle in $G$.
 The following observation about bases and circuits follow immediately
 from their definition and is useful.
 
-::: {prf:observation}
+::: {prf:observation label=obs-basis-circuit}
 
 An independent set $S$ is a basis if and only if adding any element to
 $S$ makes it dependent. A dependent set $S$ is a circuit if and only if
@@ -216,8 +216,8 @@ integer $k$. A set $S$ is independent if $|S| \leq k$.
 
 A partition matroid is specified by a ground set $E$, a partition of the
 ground set into parts $E_1, \ldots, E_m$, and a non-negative integer
-$k_i$ for each part. A set $S$ is independent if for each part $E_i$,
-$S$ contains at most $k_i$ elements from $E_i$, i.e.
+capacity $k_i$ for each part. A set $S$ is independent if for each part
+$E_i$, $S$ contains at most $k_i$ elements from $E_i$, i.e.
 $|S \cap E_i| \leq k_i$.
 
 :::
@@ -469,7 +469,7 @@ The feasible subsets of jobs form a matroid.
 
 :::
 
-::: {prf:proof enumerated=false}
+::: {prf:proof enumerated=false label=prf-sched-matroid}
 
 Let $\mathcal{F}$ be the collection of feasible subsets of jobs. The
 characterization of feasible subsets (@lem-feasible-jobs) immediately
