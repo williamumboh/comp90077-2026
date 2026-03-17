@@ -176,7 +176,7 @@ basis problem.
 
 :::
 
-::: {solution} ex-2-5
+::: {solution class=dropdown} ex-2-5
 
 Let $U$ be the set of $n$ items. By @thm-complement-trick-2, the problem
 is equivalent to finding a max-weight set of items $R$ such that
@@ -211,6 +211,9 @@ $\ell > \ell^*$, we have $R' \cap T_\ell = R \cap T_\ell$ and so
 $|R' \cap T_\ell| \leq k_\ell$. We conclude that $R'$ is feasible.
 Therefore, the feasible sets satisfy the augmentation property and form
 a matroid.
+
+We conclude that we have reformulated the problem into a max-weight
+basis problem.
 
 :::
 
