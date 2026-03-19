@@ -4,8 +4,8 @@
 
 ::: {exercise label=ex-3-1}
 
-Show that the two definitions of \[\[#def-submodular\]\[submodularity\]
-are equivalent. That is, given a set function
+Show that the two definitions of [submodularity](#def-submodular) are
+equivalent. That is, given a set function
 $g: 2^E \rightarrow \mathbb{R}$, show that for every
 $S \subseteq T \subseteq E$,
 $$g(S \cup \{e\}) - g(S) \geq g(T \cup \{e\}) - g(T)$$ if and only if
