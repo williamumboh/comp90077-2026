@@ -48,7 +48,7 @@ The subject is divided roughly into 3 parts:
 |----|----|----|
 | W1: 2/3 - 6/3 | [Administrivia](./admin), [Background](./background), [Minimum Spanning Trees](./mst), [Slides](./slides-w1.pdf), [Annotated Slides](./slides-post-w1.pdf) | @sec-tut1 |
 | W2: 9/3 - 13/3 | @sec-matroids, [Slides](./slides-w2.pdf), [Annotated Slides](./slides-post-w2.pdf), [Slides Errata](https://edstem.org/au/courses/34455/discussion/3169257) | @sec-tut2 |
-| W3: 16/3 - 20/3 | @sec-approx, @sec-submodular-max [Slides](./slides-w3.pdf) | Assignment 1 released on Mar 19 |
+| W3: 16/3 - 20/3 | @sec-approx, @sec-submodular-max, [Slides](./slides-w3.pdf), [Annotated Slides](./slides-post-w3.pdf) | Assignment 1 released on Mar 19 |
 | W4: 23/3 - 27/3 | Submodular Functions |  |
 | W5: 30/3 - 3/4 | Matching and Vertex Cover | ****Assignment 1 deadline: Apr 1 17:00**** |
 | Mid-semester break |  |  |
