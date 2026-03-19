@@ -48,7 +48,7 @@ The subject is divided roughly into 3 parts:
 |----|----|----|
 | W1: 2/3 - 6/3 | [Administrivia](./admin), [Background](./background), [Minimum Spanning Trees](./mst), [Slides](./slides-w1.pdf), [Annotated Slides](./slides-post-w1.pdf) | @sec-tut1 |
 | W2: 9/3 - 13/3 | @sec-matroids, [Slides](./slides-w2.pdf), [Annotated Slides](./slides-post-w2.pdf), [Slides Errata](https://edstem.org/au/courses/34455/discussion/3169257) | @sec-tut2 |
-| W3: 16/3 - 20/3 | Greedy Approximation Algorithms | Assignment 1 released on Mar 19 |
+| W3: 16/3 - 20/3 | @sec-approx, @sec-submodular-max [Slides](./slides-w3.pdf) | Assignment 1 released on Mar 19 |
 | W4: 23/3 - 27/3 | Submodular Functions |  |
 | W5: 30/3 - 3/4 | Matching and Vertex Cover | ****Assignment 1 deadline: Apr 1 17:00**** |
 | Mid-semester break |  |  |
@@ -56,8 +56,8 @@ The subject is divided roughly into 3 parts:
 | W7: 20/4 - 24/4 | ****Lecture replaced by MST**** | ****Mid-sem test during lecture**** |
 | W8: 27/4 - 1/5 | Linear Programming II |  |
 | W9: 4/5 - 8/5 | Linear Programming III |  |
-| W10: 11/5 - 15/5 | Online Algorithms I | Assignment 2 released on May 11 |
-| W11: 18/5 - 22/5 | Online Algorithms II | ****Assignment 2 deadline: May 24 17:00**** |
+| W10: 11/5 - 15/5 | Online Algorithms I | Assignment 2 released on May 14 |
+| W11: 18/5 - 22/5 | Online Algorithms II | ****Assignment 2 deadline: May 27 17:00**** |
 | W12: 25/5 - 29/5 | Online Algorithms III, Wrap Up |  |
 
 # Resources

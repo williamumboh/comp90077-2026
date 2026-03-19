@@ -30,7 +30,7 @@ There are [4 greedy algorithms for
 MST](https://en.wikipedia.org/wiki/Minimum_spanning_tree#Classic_algorithms).
 We focus on Kruskal's algorithm, defined as follows.
 
-::: {prf:algorithm} Kruskal's Algorithm
+::: {prf:algorithm label=alg-kruskal} Kruskal's Algorithm
 
 - Initialize $S \leftarrow E$, sorted in decreasing order of weight, and
   $F \leftarrow \emptyset$

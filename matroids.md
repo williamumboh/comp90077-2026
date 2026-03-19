@@ -10,6 +10,13 @@ combinatorial optimization problem, we need to choose from a finite set
 of objects that maximizes or minimizes some function and that satisfy
 some constraints.
 
+::: {caution}
+
+From week 3 onwards, we will be using the more precise
+[definition](#prob-comb-2) in @sec-approx.
+
+:::
+
 ::: {prf:definition label=prob-comb} Combinatorial Optimization Problem
 
 A combinatorial optimization problem consists of:
@@ -28,7 +35,7 @@ minimizes $g(S)$.
 A common class of objective functions involve summing up the weights of
 the elements in the subset. These are called additive functions.
 
-::: {prf:definition} Additive Functions (Sum of Weights)
+::: {prf:definition label=def-additive} Additive Functions
 
 A function $g: 2^E \rightarrow \mathbb{R}$ is an *additive function* if
 there exists a weight function $w: E \rightarrow \mathbb{R}$ such that
@@ -49,17 +56,17 @@ Thus, we can restate @thm-kruskal as follows.
 ::: {prf:theorem}
 
 If $\mathcal{F}$ is the set of spanning trees of a graph and $g$ is
-additive function, then [Kruskal's algorithm](#alg-Kruskal) finds an
+additive function, then [Kruskal's algorithm](#alg-kruskal) finds an
 optimal solution.
 
 :::
 
 Many greedy algorithms (such as [Kruskal's algorithm for
-MST](#alg-Kruskal)) share the same "exchange argument" in their
+MST](#alg-kruskal)) share the same "exchange argument" in their
 correctness proofs. Thus, it is natural to ask what properties of $g$
 and $\mathcal{F}$ enable a greedy algorithm. We now introduce *matroids*
 as a generalization of spanning trees[^1] and a greedy algorithm that
-generalizes [Kruskal's algorithm for MST](#alg-Kruskal). We will see
+generalizes [Kruskal's algorithm for MST](#alg-kruskal). We will see
 that matroids capture, in a minimal manner, the properties of spanning
 trees that enable a greedy algorithm.
 
@@ -288,7 +295,7 @@ $e \notin B$ such that $B \cup \{e\}$ is independent, and so the
 algorithm would have added $e$ since it considers all elements. Since
 every base has the same size, $|B| = |T|$.
 
-Next, we use the [augmentation property](#def-matroids) and an exchange
+Next, we use the [augmentation property](#def-matroid) and an exchange
 argument similar to the proof of @ex-1-3 to prove that $w(B) = w(T)$.
 Let $k = |B| = |T|$. Suppose the elements of $B$ are $b_1, \ldots, b_k$,
 and the elements of $T$ are $t_1, \ldots, t_k$, both sorted in
@@ -299,7 +306,7 @@ smallest index such that $w(b_i) < w(t_i)$ and consider the independent
 sets $$B' = \{b_1, \ldots, b_{i-1}\}$$ and
 $$T' = \{t_1, \ldots, t_{i-1},t_i\}.$$
 
-By the [augmentation property](#def-matroids), there is some element
+By the [augmentation property](#def-matroid), there is some element
 $t_j \in T' \setminus B'$ such that $B' \cup \{t_j\}$ is independent.
 Since the elements of $B$ and $T$ are sorted in decreasing order, we
 have $w(t_j) \geq w(t_i) > w(b_i)$.
@@ -307,7 +314,7 @@ have $w(t_j) \geq w(t_i) > w(b_i)$.
 Consider the iteration in which the algorithm considered the element
 $t_j$. Since $w(t_j) > w(b_i)$, this iteration is before it considered
 $b_i$. Thus, at this point in time, $B$ is a subset of $B'$ and so by
-the [downwards-closed property](#def-matroids), $B \cup \{t_j\}$ is also
+the [downwards-closed property](#def-matroid), $B \cup \{t_j\}$ is also
 independent. Therefore, the algorithm would have added $t_j$ to its
 solution. On the other hand, since $t_j \notin B'$ means that by the
 time the algorithm got to $b_i$, it had considered $t_j$ and had
@@ -326,7 +333,7 @@ and then we perform $n$ independence checks.
 The description of @alg-matroid-greedy only relies on the notion of
 independence so one may wonder if @thm-greedy-matroid finds the
 max-weight independent set in *every* [independence
-system](#def-matroids), not just matroids. Is greedy still optimal even
+system](#def-matroid), not just matroids. Is greedy still optimal even
 if we do not have the augmentation property? It turns out that's too
 good to be true.
 
@@ -392,7 +399,7 @@ How do we use this Theorem? We can use it in 2 ways:
 ## Application: Scheduling with Deadlines
 
 To apply @thm-greedy-matroid to a specific [combinatorial optimization
-problem](#def-comb), we need to show that the feasible sets of the
+problem](#prob-comb), we need to show that the feasible sets of the
 problem form a [matroid](#def-matroid). Let us see this in action for
 the following scheduling problem.
 

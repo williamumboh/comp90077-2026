@@ -92,6 +92,8 @@ In the following, let $S$ and $T$ be sets.
     $\{x \in S : x \text{ is even}\}$
 - If $S$ is a subset of $T$, then the *complement* is $S \setminus T$,
   the elements of $T$ not in $S$.
+- For a positive integer $m$, we write $[m]$ as shorthand for the set of
+  integers from $1$ to $m$: $[m] = \{1, \ldots, m\}$.
 
 For a more in-depth and beginner-friendly discussion see also [Guide to
 Elements and
