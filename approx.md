@@ -21,7 +21,6 @@ instead.
 We begin by more precisely defining problems and instances.
 
 ::: {prf:definition label=prob-comb-2} Combinatorial Optimization
-Problem
 
 A *combinatorial optimization problem* $\Pi$ consists of instances,
 where each *instance* $I \in \Pi$ consists of:

@@ -209,14 +209,17 @@ To that end, we take a closer look at $g(I^*) - g(I_{\ell-1})$. By
 monotonicity, we have
 $$g(I^*) - g(I_{\ell-1}) \leq g(I^* \cup I_{\ell-1}) - g(I_{\ell-1}).$$
 Then, we express the RHS of the above inequality as a sum of differences
-as follows. Define $I^*_\ell = \{e_1,\ldots,e_\ell\} \cup I_{\ell-1}$
-and $I^*_0 = I_{\ell-1}$. Then, we have
-$$g(I^* \cup I_{\ell-1}) - g(I_{\ell-1}) \leq \sum_{\ell = 1}^k g(I^*_\ell) - g(I^*_{\ell-1}).$$
+as follows. Define $T_j = \{e^*_1,\ldots,e^*_j\} \cup I_{j-1}$ and
+$T_0 = I_{\ell-1}$. Then, we have
+$$g(I^* \cup I_{\ell-1}) - g(I_{\ell-1}) \leq \sum_{\ell = 1}^k g(T_\ell) - g(T_{\ell-1}).$$
 
-By averaging, there exists $j$ such that
-$$\frac{g(I^* \cup I_{\ell-1}) - g(I_{\ell-1})}{k} \leq g(I^*_{j}) - g(I^*_{j-1}).$$
-By monotonicity, we have
-$$g(I^*_{j}) - g(I^*_{j-1}) \leq g(I^*_1) - g(I^*_0) = g(I_{\ell-1} \cup \{e_1\}) - g(I_{\ell-1}).$$
+By averaging, there exists $i$ such that
+$$\frac{g(I^* \cup I_{i-1}) - g(I_{i-1})}{k} \leq g(T_{i}) - g(T_{i-1}).$$
+Since $T_{i} = T_{i-1} \cup \{e^*_i\}$, we get
+$$g(T_{i}) - g(T_{i-1}) = g(T_{i-1} \cup \{e^*_i\}) - g(T_{i-1}).$$
+Moreover, $T_{i-1}$ contains $T_0 = I_{\ell-1}$, so by
+[submodularity](#def-submodular), we have
+$$g(T_{i-1} \cup \{e^*_i\}) - g(T_{i-1}) \leq g(I_{\ell-1} \cup \{e^*_i\}) - g(I_{\ell-1}).$$
 
 Putting all of the above together, we get that
 $$g(I_{\ell-1} \cup \{e_1\}) - g(I_{\ell-1}) \geq \frac{g(I^*) - g(I_{\ell-1})}{k},$$
@@ -228,8 +231,6 @@ so
 $$g(I_k) \geq \left(1 -\left(1-\frac{1}{k}\right)^k\right) g(I^*) \geq \left(1 - \frac{1}{e}\right)g(I^*).$$
 
 :::
-
-# Slides
 
 [^1]: This fact can be obtained from the Taylor expansion of $e^x$.
 
