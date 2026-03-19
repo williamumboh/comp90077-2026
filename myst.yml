@@ -27,6 +27,7 @@ project:
       children:
         - file: approx.md
         - file: submod-max.md
+    - file: a1.md  
 
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"

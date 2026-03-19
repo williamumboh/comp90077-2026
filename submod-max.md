@@ -189,7 +189,7 @@ subset $I$ with $|I| \leq k$ and maximizes $g(I)$.
 
 The [greedy algorithm](#alg-submodular-greedy) is a
 $(1 - 1/e)$-approximation algorithm for the [Cardinality-Constrained
-Submodular Maximizaion Problem](#prob-submod-max).
+Submodular Maximization Problem](#prob-submodular-max).
 
 :::
 
