@@ -27,6 +27,7 @@ project:
       children:
         - file: approx.md
         - file: submod-max.md
+        - file: tut3.md
     - file: a1.md  
 
   # github:

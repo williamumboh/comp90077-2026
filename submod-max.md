@@ -79,12 +79,13 @@ $C^* \setminus C_{\ell-1}$ is contained in $S_j \setminus C_{\ell-1}$
 for some $j \in I^*$, i.e.
 $$C^* \setminus C_{\ell-1} \subseteq \bigcup_{j \in I^*} (S_j \setminus C_{\ell-1})$$
 and so
+
 $$|C^* \setminus C_{\ell-1}| \leq \sum_{j \in I^*} |S_j \setminus C_{\ell-1}|.$$
 Since $|I^*| = k$, there is some $j \in I^*$ such that
-$$|S_j \setminus C_{\ell-1}| \geq \frac{|C^* \setminus C_{\ell-1}|}{k} \geq \frac{|C^*| - |C_{\ell-1}|}{k}.$$
-In other words, there is a set that will increase the algorithm's
-coverage by at least $(|C^*| - |C_{\ell-1}|)/k$ and so by definition of
-the greedy choice, we have
+$$|S_j \setminus C_{\ell-1}| \geq \frac{|C^* \setminus C_{\ell-1}|}{k} \geq \frac{|C^*| - |C_{\ell-1}|}{k}$$
+Adding the set $S_j$ increases the algorithm's coverage by
+$|S_j \setminus C_{\ell-1}|$. So by definition of the greedy choice, the
+increase in the algorithm's coverage is
 $$|C_\ell| - |C_{\ell-1}| \geq \frac{|C^*| - |C_{\ell-1}|}{k}.$$ Thus,
 we have
 $$|C^*| - |C_\ell| &\leq |C^*| - |C_{\ell-1}| - \frac{|C^*| - |C_{\ell-1}|}{k} \\ &= \left(1 - \frac{1}{k}\right) (|C^*| - |C_{\ell-1}|),$$
@@ -114,8 +115,10 @@ the analysis that we need is a property called submodularity.
 
 A set function $g : 2^E \rightarrow \mathbb{R}$ is *submodular* if it
 has the decreasing marginals property: for every two sets $S, T$ and
-element $e$ such that $S \subseteq T$ and $e \notin T$, we have that
-$$g(S \cup \{e\}) - g(S) \geq g(T \cup \{e\}) - g(T).$$
+element $e$ such that $S \subseteq T$ and $e \notin T$, we have that the
+marginal increase of $g$ when $e$ is added to $S$ is at least as large
+as the marginal increase of $g$ when $e$ is added to a set $T$
+containing $S$: $$g(S \cup \{e\}) - g(S) \geq g(T \cup \{e\}) - g(T).$$
 
 An equivalent definition is that for every two sets $S,T$, we have
 $$g(S) + g(T) \geq g(S \cap T) + g(S \cup T).$$
