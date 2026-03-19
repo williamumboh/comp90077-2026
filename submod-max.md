@@ -91,11 +91,14 @@ $$|C^*| - |C_\ell| &\leq |C^*| - |C_{\ell-1}| - \frac{|C^*| - |C_{\ell-1}|}{k} \
 as desired.
 
 With the above and the fact that $C_0 = \emptyset$, we get that
-$$|C^*| - |C_k| \\ &\leq \left(1-\frac{1}{k}\right)^k (|C^*|-|C_0|) \\ &=\left(1-\frac{1}{k}\right)^k|C^*|,$$
+$$|C^*| - |C_k| &\leq \left(1-\frac{1}{k}\right)^k (|C^*|-|C_0|) \\ &=\left(1-\frac{1}{k}\right)^k|C^*|,$$
 and so
 $$|C_k| \geq \left(1 - \left(1 - \frac{1}{k}\right)^k\right)|C^*| \geq \left(1 - \frac{1}{e}\right)|C^*|$$
 where the last inequality follows from the fact[^1] that
 $1 + 1/x \leq e^x$ for every $x$.
+
+Since $C_k$ is exactly the elements covered by the algorithm, we get the
+desired approximation ratio.
 
 :::
 

@@ -43,7 +43,7 @@ $$\max_{S \in \mathcal{F}} g(S) \qquad \text{ or } \qquad \min_{S \in \mathcal{F
 
 We use $\operatorname{OPT}(I) = \max_{S \in \mathcal{F}} g(S)$ for
 maximization problems and
-$\operatorname{OPT}(I) = \max_{S \in \mathcal{F}} g(S)$ for minimization
+$\operatorname{OPT}(I) = \min_{S \in \mathcal{F}} g(S)$ for minimization
 problems.
 
 For example, an instance $I$ of the Minimum Spanning Tree problem
