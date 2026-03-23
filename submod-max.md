@@ -181,7 +181,7 @@ subset $I$ with $|I| \leq k$ and maximizes $g(I)$.
 
 - Initialize $I \leftarrow \emptyset$
 - ****while**** $|I| < k$ ****do****
-  - Find $e \notin I$ that maximizes $g(U \cup \{e\}) - g(I)$
+  - Find $e \notin I$ that maximizes $g(I \cup \{e\}) - g(I)$
   - Add $e$ to $I$
 - ****end for****
 - ****return**** $I$
@@ -196,7 +196,7 @@ Submodular Maximization Problem](#prob-submodular-max).
 
 :::
 
-::: {prf:proof enumerated=false}
+::: {prf:proof enumerated=false label=prf-submod-max}
 
 Let $I^* = \{e^*_1, \ldots, e^*_k\}$ be an optimal solution. Let
 $I_\ell$ be the set $I$ at the end of the $ℓ$-th iteration. As in the
