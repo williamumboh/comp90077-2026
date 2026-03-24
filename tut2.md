@@ -23,9 +23,11 @@ part $E_i$. Let $S$ and $T$ be independent sets with $|S| > |T|$. Since
 $|S| > |T|$, there exists a part $E_i$ such that
 $k_i \geq |S \cap E_i| > |T \cap E_i|$. Pick any element $e$ in
 $(S \cap E_i) \setminus (T \cap E_i)$, and let $T' = T \cup \{e\}$. We
-have $|T' \cap E_j| = |T \cap E_j| \leq k_j$ for $j \neq i$ and
-$|T' \cap E_i| \leq |T \cap E_i| \leq k_i$. Thus, $T'$ is independent,
-as desired.
+have
+$$|T' \cap E_j| = |T \cap E_j| \leq k_j \qquad \text{for $j\neq i$}$$
+and
+$$|T' \cap E_i| \leq |S \cap E_i| \leq k_i \qquad \text{for $j = i$.}$$
+Thus, $T'$ is independent, as desired.
 
 :::
 
@@ -136,8 +138,8 @@ For the following problem, we will need a similar theorem.
 For every subset $S \subseteq U$, we have
 $w(S) + w(U \setminus S) = w(U)$. Thus, for any two subsets
 $S, T \subseteq U$, we have $w(S) > w(T)$ if and only if
-$w(U \setminus S) < w(T)$, and so the optimal solution for one is also
-optimal for the other.
+$w(U \setminus S) < w(U \setminus T)$, and so the optimal solution for
+one is also optimal for the other.
 
 :::
 
