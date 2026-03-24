@@ -140,7 +140,7 @@ submodular.
 
 :::
 
-::: {prf:proof enumerated=false}
+::: {prf:proof enumerated=false label=prf-cov-max}
 
 For every $A \subseteq [m]$, define $C(A) = \bigcup_{j \in A} S_j$, i.e.
 the elements covered by the sets indexed by $A$. Note that
@@ -228,9 +228,9 @@ Putting all of the above together, we get that
 $$g(I_{\ell-1} \cup \{e_1\}) - g(I_{\ell-1}) \geq \frac{g(I^*) - g(I_{\ell-1})}{k},$$
 as desired.
 
-The rest of the proof is similar as in the proof of @thm-coverage-max.
-We have $$g(I^*) - g(I_k) \leq \left(1-\frac{1}{k}\right)^k g(I^*)$$ and
-so
+The rest of the proof is similar as in the [proof](#prf-cov-max) of
+@thm-coverage-max. We have
+$$g(I^*) - g(I_k) \leq \left(1-\frac{1}{k}\right)^k g(I^*)$$ and so
 $$g(I_k) \geq \left(1 -\left(1-\frac{1}{k}\right)^k\right) g(I^*) \geq \left(1 - \frac{1}{e}\right)g(I^*).$$
 
 :::
