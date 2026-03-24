@@ -3,6 +3,14 @@
 Welcome to the website for COMP90077 Advanced Algorithms and Data
 Structures!
 
+Shortcuts:
+
+- @sec-schedule
+- Current week's notes: @sec-approx, @sec-submodular-max, [Annotated
+  Slides](./slides-post-wk3.pdf)
+- Current week's tutorial: @sec-tut3
+- @sec-a1 **Deadline: Wednesday 1 April 17:00**
+
 # Subject Overview
 
 Many real-world optimization problems such as scheduling and resource
