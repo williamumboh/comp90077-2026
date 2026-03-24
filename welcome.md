@@ -3,11 +3,11 @@
 Welcome to the website for COMP90077 Advanced Algorithms and Data
 Structures!
 
-Shortcuts:
+# Shortcuts
 
 - @sec-schedule
 - Current week's notes: @sec-approx, @sec-submodular-max, [Annotated
-  Slides](./slides-post-wk3.pdf)
+  Slides](./slides-post-w3.pdf)
 - Current week's tutorial: @sec-tut3
 - @sec-a1 **Deadline: Wednesday 1 April 17:00**
 
