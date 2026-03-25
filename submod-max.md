@@ -61,7 +61,7 @@ covers the most elements that were previously uncovered.
 ::: {prf:theorem label=thm-coverage-max}
 
 The [greedy algorithm](#alg-coverage-greedy) is a
-$(1 - 1/e)$-approximation algorithm for the [Coverage Maximizaion
+$(1 - 1/e)$-approximation algorithm for the [Coverage Maximization
 Problem](#def-coverage-max).
 
 :::
@@ -212,12 +212,12 @@ To that end, we take a closer look at $g(I^*) - g(I_{\ell-1})$. By
 monotonicity, we have
 $$g(I^*) - g(I_{\ell-1}) \leq g(I^* \cup I_{\ell-1}) - g(I_{\ell-1}).$$
 Then, we express the RHS of the above inequality as a sum of differences
-as follows. Define $T_j = \{e^*_1,\ldots,e^*_j\} \cup I_{j-1}$ and
+as follows. Define $T_j = \{e^*_1,\ldots,e^*_j\} \cup I_{\ell-1}$ and
 $T_0 = I_{\ell-1}$. Then, we have
 $$g(I^* \cup I_{\ell-1}) - g(I_{\ell-1}) \leq \sum_{\ell = 1}^k g(T_\ell) - g(T_{\ell-1}).$$
 
 By averaging, there exists $i$ such that
-$$\frac{g(I^* \cup I_{i-1}) - g(I_{i-1})}{k} \leq g(T_{i}) - g(T_{i-1}).$$
+$$\frac{g(I^* \cup I_{\ell-1}) - g(I_{\ell-1})}{k} \leq g(T_{i}) - g(T_{i-1}).$$
 Since $T_{i} = T_{i-1} \cup \{e^*_i\}$, we get
 $$g(T_{i}) - g(T_{i-1}) = g(T_{i-1} \cup \{e^*_i\}) - g(T_{i-1}).$$
 Moreover, $T_{i-1}$ contains $T_0 = I_{\ell-1}$, so by
@@ -225,7 +225,7 @@ Moreover, $T_{i-1}$ contains $T_0 = I_{\ell-1}$, so by
 $$g(T_{i-1} \cup \{e^*_i\}) - g(T_{i-1}) \leq g(I_{\ell-1} \cup \{e^*_i\}) - g(I_{\ell-1}).$$
 
 Putting all of the above together, we get that
-$$g(I_{\ell-1} \cup \{e_1\}) - g(I_{\ell-1}) \geq \frac{g(I^*) - g(I_{\ell-1})}{k},$$
+$$g(I_{\ell-1} \cup \{e^*_i\}) - g(I_{\ell-1}) \geq \frac{g(I^*) - g(I_{\ell-1})}{k},$$
 as desired.
 
 The rest of the proof is similar as in the [proof](#prf-cov-max) of
