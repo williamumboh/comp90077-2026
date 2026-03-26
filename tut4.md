@@ -20,8 +20,9 @@ In the following, we will consider a fixed instance of Set Cover.
 ::: {exercise}
 
 Let $I^*$ be the optimal solution. Suppose we know $k^*=|I^*|$. Show how
-to use this knowledge and ALG to get a solution $I$ with \$\|I\| ≤
-((1-ε)ln n)k^\*^, for some $\epsilon > 0$ that depends only on $\alpha$.
+to use this knowledge and ALG to get a solution $I$ with
+$|I| \leq ((1-\epsilon)\ln n)k^*$, for some $\epsilon > 0$ that depends
+only on $\alpha$.
 
 :::
 
@@ -39,4 +40,4 @@ possibilities?
 
 :::
 
-[^1]: It is not a function of $n$, or \$m\$
+[^1]: It is not a function of $n$, or $m$.
