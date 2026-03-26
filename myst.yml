@@ -29,9 +29,10 @@ project:
         - file: submod-max.md
         - file: tut3.md
     - file: a1.md
-    - title: Week 4 Set Cover and Submodular Cover
+    - title: Week 4 Knapsack and Set Cover
       children:
         - file: cover.md
+        - file: tut4.md
 
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"

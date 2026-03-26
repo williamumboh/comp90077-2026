@@ -6,9 +6,9 @@ Structures!
 # Shortcuts
 
 - @sec-schedule
-- Current week's notes: @sec-approx, @sec-submodular-max, [Annotated
-  Slides](./slides-post-w3.pdf)
-- Current week's tutorial: @sec-tut3
+- Current week's notes: @sec-cover, [Annotated
+  Slides](./slides-post-w4.pdf)
+- Current week's tutorial: @sec-tut4
 - @sec-a1 **Deadline: Wednesday 1 April 17:00**
 
 # Subject Overview
@@ -56,8 +56,8 @@ The subject is divided roughly into 3 parts:
 |----|----|----|
 | W1: 2/3 - 6/3 | [Administrivia](./admin), [Background](./background), [Minimum Spanning Trees](./mst), [Slides](./slides-w1.pdf), [Annotated Slides](./slides-post-w1.pdf) | @sec-tut1 |
 | W2: 9/3 - 13/3 | @sec-matroids, [Slides](./slides-w2.pdf), [Annotated Slides](./slides-post-w2.pdf), [Slides Errata](https://edstem.org/au/courses/34455/discussion/3169257) | @sec-tut2 |
-| W3: 16/3 - 20/3 | @sec-approx, @sec-submodular-max, [Slides](./slides-w3.pdf), [Annotated Slides (corrected)](./slides-post-w3.pdf) | @sec-a1 |
-| W4: 23/3 - 27/3 | @sec-cover, [Annotated Slides](./slides-post-w4.pdf) |  |
+| W3: 16/3 - 20/3 | @sec-approx, @sec-submodular-max, [Slides](./slides-w3.pdf), [Annotated Slides (corrected)](./slides-post-w3.pdf) | @sec-a1, @sec-tut3 |
+| W4: 23/3 - 27/3 | @sec-cover, [Annotated Slides](./slides-post-w4.pdf) | @sec-tut4 |
 | W5: 30/3 - 3/4 | Matching and Vertex Cover | ****Assignment 1 deadline: Apr 1 17:00**** |
 | Mid-semester break |  |  |
 | W6: 13/4 - 17/4 | Linear Programming I |  |
