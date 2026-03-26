@@ -58,7 +58,7 @@ length of $I$ and outputs a feasible solution $S$ with:
 
 - $g(S) \leq c \cdot \operatorname{OPT}(I)$ if $\Pi$ is a minimization
   problem;
-- $g(S) \geq c \cdot \operatorname{OPT}(I)/c$ if $\Pi$ is a maximization
+- $g(S) \geq c \cdot \operatorname{OPT}(I)$ if $\Pi$ is a maximization
   problem.
 
 The number $c$ is said to be the *approximation ratio* (or
@@ -74,10 +74,10 @@ us obtain an algorithm for $\Pi$ from an algorithm for problem $\Pi'$.
 
 ::: {prf:definition label=def-reduction} Reduction
 
-A *reduction* from problem $\Pi$ to problem $\Pi'$ is a function $\phi$
-that maps every instance $I$ of $\Pi$ to an instance $I'$ of $\Pi'$ such
-that $\operatorname{OPT}(I) = \operatorname{OPT}(I')$. We say that $\Pi$
-is *reducible to* $\Pi'$ if a reduction exists.
+Problem $\Pi$ *reduces to* problem $\Pi'$ if for every instance $I$ of
+$\Pi$, we can efficiently compute an instance $\phi(I)$ such that every
+optimal solution $S'$ of $\phi(I)$ can be efficiently transformed into
+an optimal solution $S$ of $I$.
 
 :::
 
