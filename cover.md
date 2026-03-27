@@ -119,20 +119,29 @@ Knapsack Problem.
 We will show that either $w(A)$ or $w(e^*)$ is a 1/2-approximation.
 
 First, we are going to consider an easier version of the problem called
-the Fractional Knapsack Problem. As the name suggests, in this problem,
-we are allowed to pick a fraction of an item. For example, if we pick a
-1/2 of item $e_i$, then it contributes $w(e_i)/2$ to the weight of the
-solution and $s(e_i)/2$ to the size. We now make this more precise.
+the Fractional Knapsack Problem. The purpose of this is to establish an
+upper bound on the weight of the optimal solution.
+
+As the name suggests, in this problem, we are allowed to pick a fraction
+of an item. For example, if we pick 1/2 of item $e_i$, then it
+contributes $w(e_i)/2$ to the weight of the solution and $s(e_i)/2$ to
+the size. Intuitively, if we are allowed to pick fractions, then we can
+only get a solution with higher weight. Moreover, as we show later, the
+fractional problem is actually a max-weight uniform matroid basis
+problem. Thus, we get a simple characterization of an upper bound on the
+optimal solution. We now make this more precise.
 
 Suppose our instance $I$ has items $e_1, \ldots, e_n$, with weights
 $w(e_i)$ and sizes $s(e_i)$, and capacity $C$. Suppose that the items
 are ordered in decreasing order of density. Define the fractional
 instance $I'$ where for each item $e_i$ in $I$, we create $s(e_i)$ items
 with weight $w(e_i)/s(e_i)$ and size 1. The instance $I'$ has the same
-capacity $C$. Intuitively, we have sliced each item $e_i$ into $s(e_i)$
-slices of size 1 and weight equal to the density of $e_i$. We call the
-items of $I'$ *slices*. Note that the total weight of the slices of
-$e_i$ is $w(e_i)$. See @fig-knapsack-slices for an illustration.
+capacity $C$.
+
+Intuitively, we have sliced each item $e_i$ into $s(e_i)$ slices of size
+1 and weight equal to the density of $e_i$. We call the items of $I'$
+*slices*. Note that the total weight of the slices of $e_i$ is $w(e_i)$.
+See @fig-knapsack-slices for an illustration.
 
 :::: {figure label=fig-knapsack-slices}
 
@@ -153,34 +162,38 @@ $e_i$ is $w(e_i)$. See @fig-knapsack-slices for an illustration.
 
 ::::
 
-Define $\operatorname{OPT}(I)$ and $\operatorname{OPT}(I')$ to be the
-weight of the max-weight feasible solution for $I$ and $I'$,
-respectively. Observe that
+First, we show that the optimal solution for $I'$ is an upper bound on
+that for $I$. Define $\operatorname{OPT}(I)$ and
+$\operatorname{OPT}(I')$ to be the weight of the max-weight feasible
+solution for $I$ and $I'$, respectively. Observe that
 $$\operatorname{OPT}(I') \geq \operatorname{OPT}(I).$$ This is because
 for any solution $S$ for $I$, we can construct a feasible solution of
 the same weight for $I'$ by pick every slice of every item in $S$.
 
-Suppose $i$ is the largest integer such that
-$w(e_1) + \ldots + w(e_i) \leq C$. If $i = n$, then choosing all items
-is feasible and is optimal. In the remainder of the proof, we consider
-the case $i < n$.
-
-Next, the feasible sets of $I'$ in a uniform matroid since every item
-has the same weight. Thus, Marginal Greedy is optimal and Marginal
-Greedy chooses the first $C$ slices, in decreasing order of weight.
-Since every slice of the same item has the same weight, Marginal Greedy
-picks all the slices of $e_1, \ldots, e_i$ and only some of $e_{i+1}$.
-Therefore, $A = e_1, \ldots, e_i$ and so
-$$w(A) + w(e_{i+1}) \geq \operatorname{OPT}(I') \geq \operatorname{OPT}(I).$$
+Next, we characterize the optimal solution for $I'$. Suppose $i$ is the
+largest integer such that $w(e_1) + \ldots + w(e_i) \leq C$. Observe
+that $$A = \{e_1, \ldots, e_i\}.$$ If $i = n$, then $A$ chooses all
+items and is optimal. In the remainder of the proof, we consider the
+case $i < n$.
 
 ::: {image width=50%} ./knapsack.png
 
 :::
 
-Since $e^*$ is the heaviest item, we get that
+The feasible sets of $I'$ is a [uniform matroid](#unif-matroid) since
+every item has the same weight. Thus, [Marginal
+Greedy](#alg-marginal-greedy) is [optimal](#thm-matroids). Observe that
+Marginal Greedy chooses the first $C$ slices, in decreasing order of
+weight. Since every slice of the same item has the same weight, Marginal
+Greedy picks all the slices of $e_1, \ldots, e_i$ and only some of
+$e_{i+1}$. As $A = \{e_1, \ldots, e_i\}$, we get that
+$$w(A) + w(e_{i+1}) = \operatorname{OPT}(I') \geq \operatorname{OPT}(I).$$
+
+With this upper bound on $\operatorname{OPT}(I)$, it is easy to complete
+the analysis. Since $e^*$ is the heaviest item, we get that
 $$w(A) + w(e^*) \geq \operatorname{OPT}(I),$$ and so either
 $w(A) \geq \operatorname{OPT}(I)/2$ or
-$w(e^*) \geq \operatorname{OPT}(I)/2$.
+$w(e^*) \geq \operatorname{OPT}(I)/2$, as desired.
 
 ::::::
 
@@ -229,8 +242,8 @@ but the other one stops when $k$ sets have been chosen.
 
 ::: {prf:theorem label=thm-set-cover}
 
-[Greedy Set Cover](#alg-unweighted-greedy) is a $(1+ln n)$-approximation
-for the Set Cover Problem.
+[Greedy Set Cover](#alg-unweighted-greedy) is a $(1 + \ln n)$
+approximation for the Set Cover Problem.
 
 :::
 
@@ -259,6 +272,21 @@ at most $(\ln n + 1)k$.
 
 :::
 
+The natural follow up question is: can we do better? It turns out that
+not only is computing the exact solution for Set Cover NP-hard, but any
+meaningful improvement on Greedy's approximation ratio is also NP-hard!
+
+What is a "meaningful improvement"? Typically, for minimization
+problems, given two approximation ratios $r_1, r_2$, we think of $r_1$
+as a meaningful improvement on $r_2$ if $r_1 = o(r_2)$. In the case of
+Set Cover, a meaningful improvement on Greedy is an approximation ratio
+of $o(\ln n)$. In other words, a constant-factor improvement (e.g. to
+$(\ln n)/2$), is usually not considered interesting.
+
+Remarkably, it has been shown that not only is $o(\ln n)$ NP-hard, but
+even improving the constant is NP-hard! The following result is one of
+the landmark results in the theory of approximation algorithms.
+
 ::: {prf:theorem label=thm-set-cover-hardness}
 
 For every $\epsilon > 0$, it is NP-hard to approximate Set Cover to
@@ -266,11 +294,14 @@ within $(1-\epsilon)\ln n$.
 
 :::
 
+The proof is out of the scope of this subject, but we will use this
+result to show inapproximability of other problems.
+
 The arguments in the proof of @thm-set-cover can be used to show that
 for every $\alpha > 0$, a $(1-1/e+α)$-approximation for Coverage
-Maximization implies a $(1-ε)ln )$-approximation for Set Cover for some
-$\epsilon > 0$. As a consequence, it is not possible to improve upon the
-approximation ratio for Coverage Maximization.
+Maximization implies a $(1-\epsilon)\ln n$ approximation for Set Cover
+for some $\epsilon > 0$. As a consequence, it is not possible to improve
+upon the approximation ratio for Coverage Maximization.
 
 ::: {prf:theorem}
 
@@ -278,6 +309,8 @@ For every $\alpha > 0$, it is NP-hard to approximate Coverage
 Maximization to within $(1-1/e+\alpha)$.
 
 :::
+
+In @sec-tut4, we will make the above arguments precise.
 
 [^1]: Recall that the approximation ratio of an algorithm is the
     worst-case approximation ratio of the algorithm over every instance

@@ -10,8 +10,9 @@ following theorem.
 If there exists a constant[^1] $\alpha > 0$ such that there is a
 $(1-1/e+α)$-approximation algorithm ALG for [Coverage
 Maximization](#def-coverage-max), then there exists a
-$(1-ε)ln n$-approximation algorithm for [Set Cover](#prob-set-cover),
-where $\epsilon >0$ and depends only on $\alpha$.
+$(1-\epsilon) \ln n$ approximation algorithm for [Set
+Cover](#prob-set-cover), for some $\epsilon >0$ that depends only on
+$\alpha$.
 
 :::
 
