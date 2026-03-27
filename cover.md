@@ -116,20 +116,20 @@ Knapsack Problem.
 
 :::::: {prf:proof enumerated=false}
 
-We will show that either $w(A)$ or $w(e^*)$ is a 1/2-approximation.
+We will show that either $w(A)$ or $w(e^*)$ is a 1/2-approximation by
+establishing an upper bound on the weight of the optimal solution and
+showing that $w(A) + w(e^*)$ is at least the upper bound.
 
-First, we are going to consider an easier version of the problem called
-the Fractional Knapsack Problem. The purpose of this is to establish an
-upper bound on the weight of the optimal solution.
-
-As the name suggests, in this problem, we are allowed to pick a fraction
-of an item. For example, if we pick 1/2 of item $e_i$, then it
-contributes $w(e_i)/2$ to the weight of the solution and $s(e_i)/2$ to
-the size. Intuitively, if we are allowed to pick fractions, then we can
-only get a solution with higher weight. Moreover, as we show later, the
-fractional problem is actually a max-weight uniform matroid basis
-problem. Thus, we get a simple characterization of an upper bound on the
-optimal solution. We now make this more precise.
+The upper bound is obtained by considering an easier version of the
+problem called the Fractional Knapsack Problem. As the name suggests, in
+this problem, we are allowed to pick a fraction of an item. For example,
+if we pick 1/2 of item $e_i$, then it contributes $w(e_i)/2$ to the
+weight of the solution and $s(e_i)/2$ to the size. Intuitively, if we
+are allowed to pick fractions, then we can only get a solution with
+higher weight. Moreover, as we show later, the fractional problem is
+actually a max-weight uniform matroid basis problem. Thus, we get a
+simple characterization of an upper bound on the optimal solution. We
+now make this more precise.
 
 Suppose our instance $I$ has items $e_1, \ldots, e_n$, with weights
 $w(e_i)$ and sizes $s(e_i)$, and capacity $C$. Suppose that the items
