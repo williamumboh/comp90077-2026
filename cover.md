@@ -10,7 +10,7 @@ week, we will see a different one that has many applications.
 Let us briefly recap what we have covered so far in this subject.
 
 So far, we have considered [combinatorial optimization
-problems](#def-prob-comb-2) in which each instance is of the form
+problems](#prob-comb-2) in which each instance is of the form
 $$\max_{S \in \mathcal{F}} g(S),$$ where $\mathcal{F}$ is the collection
 of independent sets in an [independence system](#def-indep).
 

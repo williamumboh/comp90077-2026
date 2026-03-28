@@ -147,23 +147,31 @@ Observe that $M_G$ indeed satisfies the 3 matroid properties:
 - The augmentation property is proved in [Tutorial 1 Exercise
   2](#ex-1-2).
 
-Next, we define the analog of spanning trees. An independent set $B$ is
-called a *basis* if it is maximally independent, i.e. there is no
-independent set $B'$ that contains $B$ and $|B'| > |B|$. The *rank* of a
-subset $S$ of the ground set is the size of the largest independent set
-contained in $S$, and is denoted by $r(S)$. The *rank* of the matroid is
-$r(E)$, the size of the largest independent set. Let $T$ be a subset of
-the ground set, and $S$ be an independent set contained in $T$. Then,
-$S$ is said to be a *maximally independent subset* of $T$ if there is no
+Next, we define the analog of spanning trees. Let $T$ be a subset of the
+ground set, and $S$ be an independent set contained in $T$. Then, $S$ is
+said to be a *maximally independent subset* of $T$ if there is no
 independent set $S'$ such that $S \subsetneq S' \subseteq T$.
 
-::: {prf:example} Bases in Graphical Matroids
+::: {prf:definition label=def-matroid-rank} Bases and Rank
 
-Observe that the bases in a graphical matroid $M_G$ is exactly the
-spanning trees of $G$. The following proposition implies that all
-spanning trees have the same size.
+An independent set $B$ is called a *basis* or *base* if it is maximally
+independent, i.e. there is no independent set $B'$ that contains $B$ and
+$|B'| > |B|$. The *rank* of a subset $S$ of the ground set is the size
+of the largest independent set contained in $S$, and is denoted by
+$r(S)$. The *rank* of the matroid is $r(E)$, the size of the largest
+independent set of the matroid.
 
 :::
+
+::: {prf:theorem label=thm-bases-graphical} Bases in Graphical Matroids
+
+The bases in a graphical matroid $M_G$ is exactly the spanning trees of
+$G$.
+
+:::
+
+The following proposition implies that all spanning trees have the same
+size.
 
 ::: {prf:proposition label=size-bases}
 
