@@ -247,7 +247,7 @@ approximation for the Set Cover Problem.
 
 :::
 
-::: {prf:proof enumerated=false}
+::: {prf:proof enumerated=false label=prf-set-cover}
 
 Let $I^*$ be the optimal solution and suppose $k = |I^*|$.
 
