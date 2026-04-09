@@ -206,12 +206,12 @@ and $$|Q \cap T_{n+1}| = 0 = |R \cap T_{n+1}|.$$
 
 Let $i^*$ be an item in
 $(Q \cap T_{\ell^*-1}) \setminus (R \cap T_{\ell^*-1})$ and define
-$R' = R \cup \{i^*\}$. We now show that $R'$ is feasible. For
+$R' = R \cup \{i^*\}$. We now show that $R'$ is removable. For
 $\ell \leq \ell^*-1$, we have $|R \cap T_{\ell}| < |Q \cap T_{\ell}|$
 and so $|R' \cap T_{\ell}| \leq |Q \cap T_{\ell}| \leq k_\ell$. For
 $\ell > \ell^*$, we have $R' \cap T_\ell = R \cap T_\ell$ and so
-$|R' \cap T_\ell| \leq k_\ell$. We conclude that $R'$ is feasible.
-Therefore, the feasible sets satisfy the augmentation property and form
+$|R' \cap T_\ell| \leq k_\ell$. We conclude that $R'$ is removable.
+Therefore, the removable sets satisfy the augmentation property and form
 a matroid.
 
 We conclude that we have reformulated the problem into a max-weight
