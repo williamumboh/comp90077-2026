@@ -6,10 +6,9 @@ Structures!
 # Shortcuts
 
 - @sec-schedule
-- Current week's notes: @sec-cover, [Annotated
-  Slides](./slides-post-w4.pdf)
-- Current week's tutorial: @sec-tut4
-- @sec-a1 **Deadline: Wednesday 1 April 17:00**
+- Current week's notes: @sec-matching-vc, [Annotated
+  Slides](./slides-post-w5.pdf)
+- Current week's tutorial: @sec-tut5
 
 # Subject Overview
 

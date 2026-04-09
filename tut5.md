@@ -1,3 +1,5 @@
+(sec-tut5)=
+
 # Tutorial 5
 
 In this tutorial, we will use duality to analyze a greedy algorithm for
