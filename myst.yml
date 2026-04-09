@@ -36,6 +36,7 @@ project:
     - title: Week 5 Matchings and Vertex Covers
       children:
         - file: matchings-vc.md
+        - file: tut5.md
 
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"
