@@ -181,13 +181,14 @@ case $i < n$.
 :::
 
 The feasible sets of $I'$ is a [uniform matroid](#unif-matroid) since
-every item has the same weight. Thus, [Marginal
+every slice has the same size; in particular, the feasible sets are
+exactly those containing at most $C$ slices. Thus, [Marginal
 Greedy](#alg-marginal-greedy) is [optimal](#thm-matroids). Observe that
 Marginal Greedy chooses the first $C$ slices, in decreasing order of
 weight. Since every slice of the same item has the same weight, Marginal
-Greedy picks all the slices of $e_1, \ldots, e_i$ and only some of
-$e_{i+1}$. As $A = \{e_1, \ldots, e_i\}$, we get that
-$$w(A) + w(e_{i+1}) = \operatorname{OPT}(I') \geq \operatorname{OPT}(I).$$
+Greedy picks all the slices of $e_1, \ldots, e_i$, i.e. it picks all of
+$A$, plus $C - s(A)$ slices of $e_{i+1}$. Thus, we get that
+$$w(A) + w(e_{i+1}) \geq \operatorname{OPT}(I') \geq \operatorname{OPT}(I).$$
 
 With this upper bound on $\operatorname{OPT}(I)$, it is easy to complete
 the analysis. Since $e^*$ is the heaviest item, we get that
