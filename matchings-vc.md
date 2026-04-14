@@ -202,7 +202,7 @@ $|M| \leq |C|$.
 
 Let $F$ be a set of edges and $C$ be a vertex cover. If $|C| < |F|$,
 then there must be a vertex $v$ in $C$ that is incident to at least two
-vertices of $F$. Therefore, if $M$ is a matching, then $|C| \geq |M|$.
+edges of $F$. Therefore, if $M$ is a matching, then $|C| \geq |M|$.
 
 :::
 

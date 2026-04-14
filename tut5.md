@@ -134,6 +134,7 @@ prove that it is optimal.
 :::
 
 Let $\mathcal{I}^*$ be a maximum set of disjoint intervals. By @ex-5-1,
-we have $|\mathcal{I}^*| \geq |S| = |\mathcal{I}|$.
+we have $|\mathcal{I}^*| \leq |S| = |\mathcal{I}|$. Thus, $\mathcal{I}$
+is a maximum set of disjoint intervals as well.
 
 ::::::
