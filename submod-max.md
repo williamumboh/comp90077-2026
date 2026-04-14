@@ -66,7 +66,7 @@ Problem](#def-coverage-max).
 
 :::
 
-::: {prf:proof enumerated=false}
+::: {prf:proof enumerated=false label=prf-cov-max}
 
 Let $I^*$ be an optimal solution and let $C^*$ be the elements covered
 by $I^*$. Let $I_\ell$ be the set $I$ at the end of the $ℓ$-th
@@ -140,7 +140,7 @@ submodular.
 
 :::
 
-::: {prf:proof enumerated=false label=prf-cov-max}
+::: {prf:proof enumerated=false}
 
 For every $A \subseteq [m]$, define $C(A) = \bigcup_{j \in A} S_j$, i.e.
 the elements covered by the sets indexed by $A$. Note that
