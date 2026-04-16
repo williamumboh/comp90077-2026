@@ -236,7 +236,7 @@ edge is in $M^*$.
 
 :::: {figure label=fig-vertex-cover}
 
-::: {image width=50%} ./w6-vertex-cover-2.jpeg
+::: {image width=70%} ./w6-vertex-cover-2.jpeg
 
 :::
 

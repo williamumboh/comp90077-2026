@@ -40,6 +40,7 @@ project:
     - title: Week 6 Bipartite Matching and LPs
       children:
         - file: bipartite-matching.md
+        - file: linear-programming-1.md
 
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"
