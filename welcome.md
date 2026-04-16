@@ -59,7 +59,7 @@ The subject is divided roughly into 3 parts:
 | W4: 23/3 - 27/3 | @sec-cover, [Annotated Slides](./slides-post-w4.pdf) | @sec-tut4 |
 | W5: 30/3 - 3/4 | Matching and Vertex Cover, [Annotated Slides](./slides-post-w5.pdf) | ****Assignment 1 deadline: Apr 1 17:00**** |
 | Mid-semester break |  |  |
-| W6: 13/4 - 17/4 | Linear Programming I |  |
+| W6: 13/4 - 17/4 | Bipartite Matching and Linear Programming I, [Annotated Slides](./slides-post-w6.pdf) |  |
 | W7: 20/4 - 24/4 | ****Lecture replaced by MST**** | ****Mid-sem test during lecture**** |
 | W8: 27/4 - 1/5 | Linear Programming II |  |
 | W9: 4/5 - 8/5 | Linear Programming III |  |

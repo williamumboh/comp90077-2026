@@ -37,6 +37,9 @@ project:
       children:
         - file: matchings-vc.md
         - file: tut5.md
+    - title: Week 6 Bipartite Matching and LPs
+      children:
+        - file: bipartite-matching.md
 
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"
