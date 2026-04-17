@@ -53,10 +53,9 @@ maximum matching and minimum vertex cover, respectively. Let
 $R^* = C^* \cap R$. We partition $L$ into $X = L \setminus C^*$ and
 $L^* = |L \cap C^*|$. Note that $|X| + |L^*| = |L| = n$. Since there is
 no perfect matching, we have $|C^*| = |M^*| < n$. Together with the fact
-that $|C^*| = |R^*| + |L^*|$, we get that
-$$| R^* | < n - | L^* | = | X | . |$$
+that $|C^*| = |R^*| + |L^*|$, we get that $$|R^*| < n - |L^*| = |X|.$$
 Since $C^*$ is a vertex cover, every neighbor of $X$ must be in $R^*$
-and so $|N(X)| \leq |R^*|$. Thus, we get $$|N(X)| ≤ |R^*| < |X|.$$
+and so $|N(X)| \leq |R^*|$. Thus, we get $$|N(X)| \leq |R^*| < |X|.$$
 
 :::
 
