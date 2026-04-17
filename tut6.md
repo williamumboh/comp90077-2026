@@ -11,6 +11,19 @@ For a set of vertices $X$ in a graph $G = (V,E)$, define the
 *neighborhood* of $X$ to be the set of vertices $v$ that share an edge
 $(u,v) \in E$ with a vertex $u \in X$, and denote it by $N(X)$.
 
+::::: {aside}
+
+::: {image width=50%} ./w6-before-xor.png
+
+:::
+
+In this graph, the neighborhood of $\{2,3\}$ is $\{4,5,6\}$, and the
+neighborhood of $\{2\}$ is $\{4,5\}$.
+
+::::
+
+:::::
+
 ::: {prf:theorem label=thm-halls} Hall's Theorem
 
 Let $G = (V,E)$ be a bipartite graph with left part $L$ and right part
