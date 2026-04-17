@@ -205,13 +205,14 @@ $G_M$.
 
 We now show how to find a minimum vertex cover in bipartite graphs.
 
-::: {prf:theorem label=thm-bip-vc}
+::: {prf:theorem label=thm-bip-vc} Strong Duality
 
 Let $G$ be a bipartite graph and $M^*$ be a maximum matching. Let $L^*$
 and $R^*$ be the left and right endpoints of $M^*$, respectively. Let
 $Q$ be the set of vertices that are reachable via an alternating path
 from a vertex in $L$. Then,
-$$C^* = (L^* \setminus Q) \cup (R^* \cap Q)$$ is a minimum vertex cover.
+$$C^* = (L^* \setminus Q) \cup (R^* \cap Q)$$ is a minimum vertex cover
+of size $|C^*| = |M^*|$.
 
 :::
 

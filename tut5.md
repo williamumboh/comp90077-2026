@@ -7,7 +7,7 @@ the Interval Hitting Set problem, a special case of Set Cover. In the
 following, the interval $[a,b]$ is the set of integers between $a$ and
 $b$, i.e. $[a,b] = \{a, a + 1, \ldots, b-1, b+1\}$.
 
-::: {prf:definition} Interval Hitting Set
+::: {prf:definition label=prob-interval-hitting} Interval Hitting Set
 
 Let $I_1, \ldots, I_n$ be a collection of intervals $I_j = [a_j, b_j]$
 where $a_j$ and $b_j$ are integers such that
@@ -20,7 +20,7 @@ find an interval hitting set $S$ that minimizes $|S|$.
 
 The dual problem is the following.
 
-::: {prf:definition} Disjoint Intervals
+::: {prf:definition label=prob-interval-disjoint} Disjoint Intervals
 
 Let $I_1, \ldots, I_n$ be a collection of intervals $I_j = [a_j, b_j]$
 where $a_j$ and $b_j$ are integers such that
