@@ -62,24 +62,22 @@ the path consisting of edges $e_1, e_3, e_2$.
 
 ::: {prf:observation label=obs-augmenting}
 
-Let $M$ be a matching, $P$ be an augmenting path, and $M' = M \oplus M$.
+Let $M$ be a matching, $P$ be an augmenting path, and $M' = M \oplus P$.
 Then $M'$ is a matching of size $|M'| = |M|+1$.
 
 :::
 
 ::: {prf:proof enumerated=false}
 
-Recall that $P \setminus M$ is the set of edges that are being added,
-and $M \setminus P$ are those being removed. Since $P$ is an augmenting
-path, we get the following: for every edge $(u,v)$ of $P \setminus M$,
-either $u$ is free or there is an edge incident to $u$ in
-$M \setminus P$, and the same holds for $v$. Thus, $M'$ is indeed a
-matching.
+Recall that the edges in common, $M \cap P$ are replaced with those of
+$P \setminus M$. Since $P$ is an augmenting path, we get the following:
+for every edge $(u,v)$ of $P \setminus M$, either $u$ is free or there
+is an edge incident to $u$ in $M \cap P$, and the same holds for $v$.
+Thus, $M'$ is indeed a matching.
 
 Since $P$ is an augmenting path, the first and last edges of $P$ is not
 in $M$. Moreover, $P$ is alternating and so
-$|P \setminus M| = |M \setminus P| + 1$. Thus, we get that
-$|M'| = |M| + 1$.
+$|P \setminus M| = |M \cap P| + 1$. Thus, we get that $|M'| = |M| + 1$.
 
 :::
 
