@@ -214,13 +214,13 @@ $C$ that minimizes $\sum_{v \in C} w_v$.
 The following are the integer and linear programs.
 
 $$\begin{align}
-\text{minimize} \quad & \sum_v x_v\\
+\text{minimize} \quad & \sum_v w_v x_v\\
 \text{subject to} \quad & x_u + x_v \geq 1 \quad  && \forall (u,v) \in E\\
 & x_v \in \{0,1\} \quad  && \forall v \in V
 \end{align}$$
 
 $$\begin{align}
-\text{minimize} \quad & \sum_v x_v\\
+\text{minimize} \quad & \sum_v w_v x_v\\
 \text{subject to} \quad & x_u + x_v \geq 1 \quad  && \forall (u,v) \in E\\
 & x_v \geq 0 \quad  && \forall v \in V
 \end{align}$$
