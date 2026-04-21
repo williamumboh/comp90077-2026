@@ -101,7 +101,7 @@ LP is as follows.
 $$\begin{align}
 \text{minimize} \quad & \sum_i x_i\\
 \text{subject to} \quad & \sum_{i \in I_j} x_i \geq 1 \quad  && \forall j \in [m]\\
-& x_i \geq 1 \quad  && \forall i \in [n]
+& x_i \geq 0 \quad  && \forall i \in [n]
 \end{align}$$
 
 For Disjoint Intervals, we have a variable $y_j$ for each $j \in [m]$ to
