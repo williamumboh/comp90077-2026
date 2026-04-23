@@ -144,7 +144,7 @@ Let $G$ be a bipartite graph and $M$ be a matching. The *residual
 network* $G_M$ is a directed graph obtained from $G$ as follows:
 
 - for each edge $e \in M$, direct it right to left
-- for each edge $e \notin M$, direct it left to left
+- for each edge $e \notin M$, direct it left to right
 - add a new vertex $s$ and a directed edge from $s$ to each free vertex
   in $L$
 - add a new vertex $t$ and a directed edge to $t$ from each free vertex
