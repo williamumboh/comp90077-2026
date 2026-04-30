@@ -6,9 +6,8 @@ Structures!
 # Shortcuts
 
 - @sec-schedule
-- Current week's notes: @sec-bipartite, @sec-linear-programming-1,
-  [Annotated Slides](./slides-post-w6.pdf)
-- Current week's tutorial: @sec-tut6
+- Current week's notes: TBD, [Annotated Slides](./slides-post-w8.pdf)
+- Current week's tutorial: TBD
 
 # Subject Overview
 
@@ -61,7 +60,7 @@ The subject is divided roughly into 3 parts:
 | Mid-semester break |  |  |
 | W6: 13/4 - 17/4 | [Bipartite Matching](#sec-bipartite), [Linear Programming I](#sec-linear-programming-1), [Annotated Slides](./slides-post-w6.pdf) |  |
 | W7: 20/4 - 24/4 | ****Lecture replaced by MST**** | ****Mid-sem test during lecture**** |
-| W8: 27/4 - 1/5 | Linear Programming II |  |
+| W8: 27/4 - 1/5 | LP Rounding, [Annotated Slides](./slides-post-w8.pdf) |  |
 | W9: 4/5 - 8/5 | Linear Programming III |  |
 | W10: 11/5 - 15/5 | Online Algorithms I | Assignment 2 released on May 14 |
 | W11: 18/5 - 22/5 | Online Algorithms II | ****Assignment 2 deadline: May 27 17:00**** |

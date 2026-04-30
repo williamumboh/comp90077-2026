@@ -113,7 +113,7 @@ $b_{ij}$ and $c$ be the vector $(c_1, \ldots, c_m)$. Then, the
 inequalities can represented as $Bx\leq c$. Thus, we get the following
 equivalent definition.
 
-::: {prf:definition label=def-lp} Linear Program
+::: {prf:definition label=def-lp-vec} Linear Program
 
 Given vectors $a \in \mathbb{R}^n$ and $c \in \mathbb{R}^m$, and a
 matrix $B \in \mathbb{R}^{m \times n}$, the goal is to solve the
