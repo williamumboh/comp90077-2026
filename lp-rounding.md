@@ -101,6 +101,8 @@ $i \in S$ if and only if $X_i = 1$ is an $α$-approximation for $\Pi$.
 
 :::
 
+(sec-weighted-set-cover)=
+
 ## Weighted Set Cover
 
 We consider the Weighted Set Cover problem.
@@ -217,7 +219,8 @@ probability that a fixed element is not covered.
 
 ::: {prf:lemma label=lem-set-cover-prob}
 
-For every element $e$, we have \$Pr\[*e* not covered\] ≤ exp(-α)\$.
+For every element $e$, we have
+$$\Pr[\text{$e$ not covered}] \leq \exp(-\alpha).$$
 
 :::
 
@@ -274,6 +277,61 @@ Set Cover.
 
 :::
 
+## Integrality Gaps
+
+Given an LP rounding algorithm, a natural question to ask is whether our
+rounding scheme is as good as it can get. Note that we are not asking
+for a better approximation algorithm that uses a different LP or a
+non-LP based algorithm for the same problem.
+
+::: {prf:definition label=def-int-gap}
+
+The *integrality gap* of an LP is the worst-case
+$\operatorname{OPT-IP}/\operatorname{OPT-LP}$ over all instances.
+
+:::
+
+The integrality gap of an LP is a lower bound on the best approximation
+ratio that can be obtained by rounding the LP. The below results show
+that we gotten as much mileage as we can out of the Set Cover and Vertex
+Cover LPs.
+
+::: {prf:theorem}
+
+The integrality gap of the Set Cover LP in @sec-weighted-set-cover is
+$\Omega(\log n)$, even for unweighted Set Cover.
+
+:::
+
+::: {prf:theorem}
+
+The integrality gap of the Vertex Cover LP in @sec-vc-lp is at least
+$2(1-1/n)$, even for unweighted Vertex Cover.
+
+:::
+
+::: {prf:proof enumerated=false}
+
+In @ex-6-2 of @sec-tut6, we [showed](#sol-6-2) that the integrality gap
+is at least $4/3$. We now show that we can get an integrality gap of
+$2(1-1/n)$ using a graph with $n$ vertices.
+
+Intuitively, to construct an integrality gap instance, we want a
+fractional solution that is as fractional as possible. In the case of
+the vertex cover LP, this corresponds to setting $x_v = 1/2$ for every
+vertex $v$. Note that the fractional solution has total cost $n/2$ and
+is feasible regardless of the edge set. Now that we have fixed the
+fractional solution, we want to add edges to make the integral vertex
+cover as large as possible. Intuitively, the more edges the larger the
+integral vertex cover should be. Indeed, if the graph is complete (i.e.
+has all ${n \choose 2}$ edges), then the smallest integral vertex cover
+is to choose $n-1$ vertices; if it misses 2 vertices $u$ and $v$, then
+it does not cover the edge $(u,v)$.
+
+Thus, the integrality gap is at least $n-1/(n/2) = 2(1- 1/n)$.
+
+:::
+
 ## Min $(s,t)$-Cut
 
 Graph Partitioning is a class of problems in which we are given a graph
@@ -299,6 +357,8 @@ that $s \in S$ and $t \in T$ while minimizing the cost of cut edges
 $c(S) = \sum_{e \in \delta(S)} c_e$.
 
 :::
+
+(sec-cut-IP)=
 
 ### Integer Program Formulation
 

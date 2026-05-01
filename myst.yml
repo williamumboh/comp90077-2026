@@ -48,6 +48,7 @@ project:
     - title: Week 8 LP Rounding
       children:
         - file: lp-rounding.md
+        - file: tut8.md
    
 
   # github:

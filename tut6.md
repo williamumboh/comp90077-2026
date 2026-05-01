@@ -74,7 +74,7 @@ $C$ has size $|C| \geq 2 \sum_v x_v$.
 
 :::
 
-::: {solution class=dropdown} ex-6-2
+::: {solution class=dropdown label=sol-6-2} ex-6-2
 
 Consider the complete graph $G$ on 3 vertices: $V = \{1, 2, 3\}$ and
 $E = \{(1,2),(2,3),(1,3)\}$. Then, $x_1 = x_2 = x_3 = 1/2$ is a feasible
