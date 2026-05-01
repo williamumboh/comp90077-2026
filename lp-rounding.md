@@ -411,7 +411,7 @@ have
 $$\sum_i p_i c(S_i) = C^*.$$
 By optimality, we have that $c(S_i) \geq C^*$ for every
 $1 \leq i \leq n$. Therefore, we have that $c(S_i) \geq C^*$ for every
-$1 \leq i \leq n$.
+$1 \leq i \leq n$.[^4]
 
 :::
 
@@ -431,3 +431,7 @@ There is a deterministic exact algorithm for Min $(s,t)$-Cut.
     an embedding the vertices $V$ into a metric space.
 
 [^3]: Here, $s = v_1$.
+
+[^4]: Intuitively, if we take the average of a set of numbers, one of
+    the numbers is strictly more than the average if and only if some
+    other number in the set is strictly less than the average.
