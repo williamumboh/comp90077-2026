@@ -42,6 +42,13 @@ project:
         - file: bipartite-matching.md
         - file: linear-programming-1.md
         - file: tut6.md
+    - title: Week 7 Mid-Semester Test 
+      children:
+        - file: none
+    - title: Week 8 LP Rounding
+      children:
+        - file: lp-rounding.md
+   
 
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"

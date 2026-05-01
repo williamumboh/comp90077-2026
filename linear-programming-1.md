@@ -17,12 +17,9 @@ that either $u$ or $v$ is chosen is equivalent to the inequality
 $x_u + x_v \geq 1$.
 
 In other words, we can express vertex cover as follows:
-
-$$\begin{align}
-\text{minimize} \quad & \sum_v x_v\\
+$$\text{minimize} \quad & \sum_v x_v\\
 \text{subject to} \quad & x_u + x_v \geq 1 \quad  && \forall (u,v) \in E\\
-& x_v \in \{0,1\} \quad  && \forall v \in V
-\end{align}$$
+& x_v \in \{0,1\} \quad  && \forall v \in V$$
 
 :::
 
@@ -37,12 +34,9 @@ is chosen is equivalent to the inequality
 $\sum_{i : S_i \ni e} x_i \geq 1$.
 
 Thus, we can express set cover as follows:
-
-$$\begin{align}
-\text{minimize} \quad & \sum_i x_i\\
+$$\text{minimize} \quad & \sum_i x_i\\
 \text{subject to} \quad & \sum_{i: S_i \ni e} x_i \geq 1 \quad  && \forall e \in U\\
-& x_i \in \{0,1\} \quad  && \forall i \in [m]
-\end{align}$$
+& x_i \in \{0,1\} \quad  && \forall i \in [m]$$
 
 :::
 
@@ -55,13 +49,11 @@ is $\sum_e x_e$. For each vertex $v \in V$, the constraint that at most
 one edge in $M$ is incident to $u$ is equivalent to the inequality
 $\sum_{e \text{ incident to } v} x_e \leq 1$.
 
-Thus, we can express maximum matching as follows:
-
-$$\begin{align}
-\text{maximize} \quad & \sum_e x_e\\
-\text{subject to} \quad & \sum_{e \text{ incident to } v} x_e \leq 1 \quad  && \forall v \in V\\
-& x_e \in \{0,1\} \quad  && \forall e \in E
-\end{align}$$
+Thus, we can express maximum matching as follows. Let $\delta(v)$ =
+\\(u,v) ∈ E\\\$, the set of edges incident to $v$.
+$$\text{maximize} \quad & \sum_e x_e\\
+\text{subject to} \quad & \sum_{e \in \delta(v)} x_e \leq 1 \quad  && \forall v \in V\\
+& x_e \in \{0,1\} \quad  && \forall e \in E$$
 
 :::
 
@@ -75,12 +67,9 @@ items is $\sum_i w_i x_i$. The capacity constraint is equivalent to the
 linear inequality $\sum_i s_i x_i \leq C$.
 
 Thus, we can express knapsack as follows:
-
-$$\begin{align}
-\text{maximize} \quad & \sum_i w_ix_i\\
+$$\text{maximize} \quad & \sum_i w_ix_i\\
 \text{subject to} \quad & \sum_i s_ix_i \leq C \quad  && \\
-& x_i \in \{0,1\} \quad  && \forall i \in [n]
-\end{align}$$
+& x_i \in \{0,1\} \quad  && \forall i \in [n]$$
 
 :::
 
@@ -118,12 +107,9 @@ equivalent definition.
 Given vectors $a \in \mathbb{R}^n$ and $c \in \mathbb{R}^m$, and a
 matrix $B \in \mathbb{R}^{m \times n}$, the goal is to solve the
 following optimization problem
-
-$$\begin{align}
-\text{maximize} \quad & a^\intercal x\\
-\text{subject to} \quad & Bx \leq c \quad  && \\
-& x \in \mathcal{R}^n \quad  &&
-\end{align}$$
+$$\text{maximize} \quad & a^\intercal x\\
+\text{subject to} \quad & Bx \leq c \quad  & \\
+& x \in \mathcal{R}^n \quad  &$$
 
 :::
 
@@ -137,32 +123,27 @@ can be solved efficiently.
 
 ::: {prf:theorem label=thm-lp-solve}
 
-Given a linear program with $n$ variables and $m$ constraints, an
-optimal solution can be found in time polynomial in $n$ and $m$.
+Given a linear program with $n$ variables, $m$ constraints, and whose
+coefficients can be represented using $L$ bits, an optimal solution can
+be found in time polynomial in $n, m, L$.
 
 :::
 
 Next, we show how to use this fact to design approximation algorithms by
 "rounding" solutions to linear programs.
 
+(sec-vc-lp)=
+
 ## Rounding Vertex Cover LP
 
 Recall the integer program for vertex cover from earlier
-
-$$\begin{align}
-\text{minimize} \quad & \sum_v x_v\\
+$$\text{minimize} \quad & \sum_v x_v\\
 \text{subject to} \quad & x_u + x_v \geq 1 \quad  && \forall (u,v) \in E\\
-& x_v \in \{0,1\} \quad  && \forall v \in V
-\end{align}$$
-
+& x_v \in \{0,1\} \quad  && \forall v \in V$$
 The following is a linear program for vertex cover:
-
-$$\begin{align}
-\text{minimize} \quad & \sum_v x_v\\
+$$\text{minimize} \quad & \sum_v x_v\\
 \text{subject to} \quad & x_u + x_v \geq 1 \quad  && \forall (u,v) \in E\\
-& x_v \geq 0 \quad  && \forall v \in V
-\end{align}$$
-
+& x_v \geq 0 \quad  && \forall v \in V$$
 Observe that the linear program *relaxes* the integer constraint
 $x_v \in \{0,1\}$ to $x_v \geq 0$ which allows $x_v$ to take fractional
 values such as $1/4$.
@@ -212,18 +193,13 @@ $C$ that minimizes $\sum_{v \in C} w_v$.
 :::
 
 The following are the integer and linear programs.
-
-$$\begin{align}
-\text{minimize} \quad & \sum_v w_v x_v\\
+$$\text{minimize} \quad & \sum_v w_v x_v\\
 \text{subject to} \quad & x_u + x_v \geq 1 \quad  && \forall (u,v) \in E\\
-& x_v \in \{0,1\} \quad  && \forall v \in V
-\end{align}$$
+& x_v \in \{0,1\} \quad  && \forall v \in V$$
 
-$$\begin{align}
-\text{minimize} \quad & \sum_v w_v x_v\\
+$$\text{minimize} \quad & \sum_v w_v x_v\\
 \text{subject to} \quad & x_u + x_v \geq 1 \quad  && \forall (u,v) \in E\\
-& x_v \geq 0 \quad  && \forall v \in V
-\end{align}$$
+& x_v \geq 0 \quad  && \forall v \in V$$
 
 The proof of the following lemma follows along the same lines as above.
 
