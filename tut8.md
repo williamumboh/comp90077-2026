@@ -36,9 +36,9 @@ Show that the LP relaxation of the above IP is equivalent to the one in
 
 ::: {exercise label=ex-8-2}
 
-Assume you are given an optimal solution $x^*$ to the LP[^1]. Show that
-you can round it to an integral solution $X$ whose cost is at most that
-of $x^*$.
+Assume you are given an optimal solution $x^*$ to the above LP[^1]. Show
+that you can round it to an integral solution $X$ whose cost is at most
+that of $x^*$.
 
 :::
 
