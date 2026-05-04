@@ -38,8 +38,8 @@ Formally, the integer program IP is equivalent to $\Pi$ if and only if
 the following two conditions hold:
 
 - for every $S \in \mathcal{F}$, there exists $x \in \{0,1\}^n$ such
-  that $Bx \leq c$ and $\sum_{i \in S} w_i = \sum_i w_ix_i$; and
-- for every $x \in \{0,1\}^n$ such that $Bx \leq c$, there exists
+  that $Bx \geq c$ and $\sum_{i \in S} w_i = \sum_i w_ix_i$; and
+- for every $x \in \{0,1\}^n$ such that $Bx \geq c$, there exists
   $S \in \mathcal{F}$ such that $\sum_{i \in S} w_i = \sum_i w_ix_i$.
 
 Typically, there is an obvious IP that is equivalent—called the
@@ -328,7 +328,7 @@ has all ${n \choose 2}$ edges), then the smallest integral vertex cover
 is to choose $n-1$ vertices; if it misses 2 vertices $u$ and $v$, then
 it does not cover the edge $(u,v)$.
 
-Thus, the integrality gap is at least $n-1/(n/2) = 2(1- 1/n)$.
+Thus, the integrality gap is at least $(n-1)/(n/2) = 2(1- 1/n)$.
 
 :::
 
