@@ -7,7 +7,7 @@ analysis of approximation algorithms. In the textbooks [The Design of
 Approximation Algorithms](http://www.designofapproxalgs.com/book.pdf)
 and [Approximation Algorithms](https://ics.uci.edu/~vazirani/book.pdf),
 linear programming play a central role. A key reason is that fractional
-relaxations of problems let us obtain a bound on the optimal solution
+relaxations of problems let us obtain a bound on the optimal solution.
 
 There are several techniques based on linear programming. In this
 lecture, we continue developing the LP rounding technique introduced in
