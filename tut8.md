@@ -79,9 +79,9 @@ By definition of $x$, its LP cost is the same as that of $d$.
 
 ::: {exercise label=ex-8-2}
 
-Assume you are given an optimal solution $x^*$ to the above LP[^1]. Show
-that you can round it to an integral solution $X$ whose cost is at most
-that of $x^*$.
+Assume you are given an optimal solution $x^*$ to
+$\operatorname{Path-LP}$.[^1] Show that you can round it to an integral
+solution $X$ whose cost is at most that of $x^*$.
 
 :::
 
