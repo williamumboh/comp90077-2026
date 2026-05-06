@@ -391,12 +391,17 @@ cut, then for every other vertex $w$, either $u$ and $w$ are cut or $v$
 and $w$ are cut. This gives the triangle inequality
 $d_{uv} \leq d_{uw} + d_{vw}$.
 
-In summary, we get the following integer program.
-$$\text{minimize} \quad & \sum_{(u,v) \in E} d_{uv}c_{uv}\\
+In summary, we get the following integer program called
+$\operatorname{Metric-IP}$.
+$$\label{metric-IP}
+\text{minimize} \quad & \sum_{(u,v) \in E} d_{uv}c_{uv}\\
 \text{subject to} \quad
 & d_{st} = 1 \quad  && \\
 & d_{uv} \leq d_{uw} + d_{vw} && \forall u,v,w \in V\\
 & d_{uv} \in \{0,1\} \quad  && \forall u,v \in V$$
+Its LP relaxation, where the integrality constraints are relaxed to
+nonnegativity constraints, i.e. $d_{uv} \geq 0$, is called
+$\operatorname{Metric-LP}$.
 
 ### Rounding
 
