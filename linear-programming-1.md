@@ -109,7 +109,7 @@ matrix $B \in \mathbb{R}^{m \times n}$, the goal is to solve the
 following optimization problem
 $$\text{maximize} \quad & a^\intercal x\\
 \text{subject to} \quad & Bx \leq c \quad  & \\
-& x \in \mathcal{R}^n \quad  &$$
+& x \in \mathbb{R}^n \quad  &$$
 
 :::
 
