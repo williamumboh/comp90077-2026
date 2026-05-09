@@ -91,7 +91,7 @@ two constraints: $x_1 \leq 20$ and $x_2 \leq 30$.
 
 :::: {figure label=fig-lp-viz-box}
 
-::: {image width=50%} ./lp-viz-box-constraints.png
+::: {image width=75%} ./lp-viz-box-constraints.png
 
 :::
 
@@ -111,7 +111,7 @@ satisfies $x_1 + x_2 < 40$.
 
 :::: {figure label=fig-lp-viz-diagonal}
 
-::: {image width=50%} ./lp-viz-diagonal.png
+::: {image width=75%} ./lp-viz-diagonal.png
 
 :::
 
@@ -126,7 +126,7 @@ The feasible region is then the intersection of the regions in
 
 :::: {figure label=fig-lp-viz-feasible}
 
-::: {image width=50%} ./lp-viz-feasible.png
+::: {image width=75%} ./lp-viz-feasible.png
 
 :::
 
@@ -145,7 +145,7 @@ or increases the objective.
 
 :::: {figure label=fig-lp-viz-objective}
 
-::: {image width=50%} ./lp-viz-objective.png
+::: {image width=75%} ./lp-viz-objective.png
 
 :::
 
@@ -161,7 +161,7 @@ We now combine @fig-lp-viz-feasible and @fig-lp-viz-objective.
 
 :::: {figure}
 
-::: {image width=50%} ./lp-viz-overall.png
+::: {image width=75%} ./lp-viz-overall.png
 
 :::
 
