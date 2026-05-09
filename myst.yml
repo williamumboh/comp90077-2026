@@ -52,6 +52,7 @@ project:
     - title: Week 9 Linear Programming
       children:
         - file: lp.md
+        - file: lp-duality.md
    
 
   # github:
