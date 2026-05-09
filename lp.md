@@ -70,7 +70,7 @@ Unless otherwise specified, we will use:
 ## Geometry of LPs
 
 See pages 7, 8, 9 of [Annotated Slides](./slides-post-w9.pdf) for
-examples of the definitions below.
+illustrations of the definitions below.
 
 ::: {prf:definition label=def-polytope}
 
