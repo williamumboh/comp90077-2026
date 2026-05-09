@@ -175,10 +175,10 @@ value is 30. Since the dashed line intersects the feasible region, we
 know that there are feasible points with objective value 30.
 
 As we shift the dashed line in the direction perpendicular to the line,
-we get feasible points with higher objective value, until we reach the
-line $x_1 + 6x_2 = 190$ which intersects the feasible region at a single
-point $x^* = (10,30)$. We conclude that $x^*$ is the unique optimal
-solution to the LP.
+i.e., along the direction vector $(1,6)$, we get feasible points with
+higher objective value, until we reach the line $x_1 + 6x_2 = 190$ which
+intersects the feasible region at a single point $x^* = (10,30)$. We
+conclude that $x^*$ is the unique optimal solution to the LP.
 
 ## Geometry of LPs
 
