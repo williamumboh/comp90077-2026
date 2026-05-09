@@ -6,8 +6,9 @@ Structures!
 # Shortcuts
 
 - @sec-schedule
-- Current week's notes: TBD, [Annotated Slides](./slides-post-w9.pdf)
-- Current week's tutorial: TBD
+- Current week's notes: @sec-lp, @sec-lp-duality, [Annotated
+  Slides](./slides-post-w9.pdf)
+- Current week's tutorial: @sec-tut9
 
 # Subject Overview
 
@@ -61,7 +62,7 @@ The subject is divided roughly into 3 parts:
 | W6: 13/4 - 17/4 | [Bipartite Matching](#sec-bipartite), [Linear Programming I](#sec-linear-programming-1), [Annotated Slides](./slides-post-w6.pdf) |  |
 | W7: 20/4 - 24/4 | ****Lecture replaced by MST**** | ****Mid-sem test during lecture**** |
 | W8: 27/4 - 1/5 | @sec-lp-rounding, [Annotated Slides](./slides-post-w8.pdf) | @sec-tut8 |
-| W9: 4/5 - 8/5 | LP Duality, [Annotated Slides](./slides-post-w9.pdf) |  |
+| W9: 4/5 - 8/5 | @sec-lp, @sec-lp-duality, [Annotated Slides](./slides-post-w9.pdf) | @sec-tut9 |
 | W10: 11/5 - 15/5 | Applications of LP Duality | Assignment 2 released on May 14 |
 | W11: 18/5 - 22/5 | Online Algorithms | ****Assignment 2 deadline: May 27 17:00**** |
 | W12: 25/5 - 29/5 | Online Algorithms, Wrap Up |  |
