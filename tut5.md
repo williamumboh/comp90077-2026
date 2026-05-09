@@ -14,7 +14,7 @@ where $a_j$ and $b_j$ are integers such that
 $1 \leq a_j \leq b_j \leq n$. A subset $S \subseteq \{1, \ldots, n\}$ is
 a *hitting set* if $I_j \cap S \neq \emptyset$ for every interval $I_j$.
 That is, every interval contains some integer in $S$. The goal is to
-find an interval hitting set $S$ that minimizes $|S|$.
+find a hitting set $S$ that minimizes $|S|$.
 
 :::
 
