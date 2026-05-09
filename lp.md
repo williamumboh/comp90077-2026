@@ -67,10 +67,120 @@ Unless otherwise specified, we will use:
 - $n$ to mean the number of variables and $j$ to index variables, and
 - $m$ to denote the number of constraints and $i$ to index constraints.
 
-## Geometry of LPs
+## Visualizing LPs
 
-See pages 7, 8, 9 of [Annotated Slides](./slides-post-w9.pdf) for
-illustrations of the definitions below.
+We now visualize a small LP with two variables to gain some intuition.
+
+Consider the following LP
+$$\label{w9-lp-example}
+\text{maximize} \quad & x_1 + 6x_2  \\
+\text{subject to} \quad
+& x_1   &\leq 20\\
+&  x_2  &\leq 30\\
+& x_1 +  x_2  &\leq 40\\
+& x \geq 0$$
+
+In the following, we will express solutions as points in 2 dimensions,
+with $x_1$ along the horizontal axis and $x_2$ along the vertical axis,
+and use the term *feasible region* to mean the set of feasible points.
+
+### Feasible Region
+
+Let's first visualize the set of nonnegative $x$ satisfying the first
+two constraints: $x_1 \leq 20$ and $x_2 \leq 30$.
+
+:::: {figure label=fig-lp-viz-box}
+
+::: {image width=50%} ./lp-viz-box-constraints.png
+
+:::
+
+The shaded region is the set of nonnegative $x$ satisfying the
+constraints $x_1 \leq 20$ and $x_2 \leq 30$. The shaded region is
+bounded by the lines $x_1 = 20$ and $x_2 = 30$.
+
+::::
+
+Next, we visualize the set of nonnegative $x$ satisfying the constraint
+$x_1 + x_2 \leq 40$. To do this, we first draw the line
+$x_1 + x_2 = 40$. The points on the line satisfy the constraint exactly.
+The line also divides the nonnegative points into two regions, the
+points that satisfy $x_1 + x_2 > 40$ and those that satisfy
+$x_1 + x_2 < 40$. The region containing $(0,0)$ is the one that
+satisfies $x_1 + x_2 < 40$.
+
+:::: {figure label=fig-lp-viz-diagonal}
+
+::: {image width=50%} ./lp-viz-diagonal.png
+
+:::
+
+The shaded region is the set of nonnegative $x$ satisfying the
+constraints $x_1 + x_2 \leq 40$. The shaded region is bounded by the
+line $x_1 + x_2 = 40$.
+
+::::
+
+The feasible region is then the intersection of the regions in
+@fig-lp-viz-box and @fig-lp-viz-diagonal.
+
+:::: {figure label=fig-lp-viz-feasible}
+
+::: {image width=50%} ./lp-viz-feasible.png
+
+:::
+
+The shaded region is the feasible region. The shaded region is bounded
+by the lines $x_1 = 20$, $x_2 = 30$, and $x_1 + x_2 = 40$.
+
+::::
+
+### Objective Function
+
+Now, we consider the objective function $x_1 + 6x_2$. The coefficients
+of the objective function yields the direction vector $(1,6)$. The
+objective function remains constant if we move orthogonally to the
+direction vector while any other movement either decreases the objective
+or increases the objective.
+
+:::: {figure label=fig-lp-viz-objective}
+
+::: {image width=50%} ./lp-viz-objective.png
+
+:::
+
+Illustration of the objective function $x_1 + 6x_2$. The dashed lines
+are orthogonal to the direction vector and hence the points on the same
+line have same objective function value.
+
+::::
+
+### Putting it all together
+
+We now combine @fig-lp-viz-feasible and @fig-lp-viz-objective.
+
+:::: {figure}
+
+::: {image width=50%} ./lp-viz-overall.png
+
+:::
+
+The red point $(10,30)$ is the optimal solution with objective function
+value $190$.
+
+::::
+
+The dashed line $x_1 + 6x_2 = 30$ contains all points whose objective
+value is 30. Since the dashed line intersects the feasible region, we
+know that there are feasible points with objective value 30.
+
+As we shift the dashed line in the direction perpendicular to the line,
+we get feasible points with higher objective value, until we reach the
+line $x_1 + 6x_2 = 190$ which intersects the feasible region at a single
+point $x^* = (10,30)$. We conclude that $x^*$ is the unique optimal
+solution to the LP.
+
+## Geometry of LPs
 
 ::: {prf:definition label=def-polytope}
 
@@ -89,13 +199,19 @@ and only if it satisfies at least one linear inequality exactly.
 
 :::
 
+:::: {aside}
+
+The feasible region of an LP is a polytope.
+
+::: {image width=100%} ./lp-viz-feasible.png
+
+:::
+
 See [Wikipedia article on convex
 polytopes](https://en.wikipedia.org/wiki/Convex_polytope) for other
 examples of polytopes.
 
-Given an LP, we will also refer to solutions as "points", the set of
-feasible solutions as the "feasible region" and the "polytope of the
-LP".
+::::
 
 ## Intuition for Solving LPs
 
@@ -131,6 +247,18 @@ A solution $x$ to an LP is a *basic feasible solution* if it has exactly
 $n$ tight constraints.
 
 :::
+
+:::: {aside}
+
+For the example LP @w9-lp-example, note that the optimal solution
+$x^* = (10,30)$ indeed has $n=2$ tight constraints: $x_2 \leq 30$ and
+$x_1+x_2 \leq 40$.
+
+::: {image width=100%} ./lp-viz-overall.png
+
+:::
+
+::::
 
 ::: {prf:theorem label=thm-lp-bfs}
 

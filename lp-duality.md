@@ -91,6 +91,9 @@ $$\label{lp-example-dual}
 & y_2 + y_3  &\geq 6\\
 & y \geq 0$$
 
+The optimal solution to the dual is $y^*_1 =0$, $y^*_2=5$, y^\*^~3~=1\$
+with value $190$.
+
 ## Duals in General
 
 Let us now consider a general canonical LP
