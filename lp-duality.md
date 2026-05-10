@@ -75,7 +75,8 @@ $$\label{lp-example-comb}
 (y_1+y_3)x_1 + (y_2+y_3)x_2 \leq 20 y_1 + 30 y_2 + 40 y_3.$$
 
 If $y$ satisfies the inequalities
-$$y_1 + y_3 \geq 1 \\
+$$\label{eq-y}
+y_1 + y_3 \geq 1 \\
 y_2 + y_3 \geq 6$$
 then since $x \geq 0$, Inequality @lp-example-comb yields an upper bound
 on $\operatorname{OPT}$:
@@ -91,8 +92,53 @@ $$\label{lp-example-dual}
 & y_2 + y_3  &\geq 6\\
 & y \geq 0$$
 
-The optimal solution to the dual is $y^*_1 =0$, $y^*_2=5$, y^\*^~3~=1\$
+The optimal solution to the dual is $y^*_1 =0$, $y^*_2=5$, $y^*_3=1$
 with value $190$.
+
+### Visual interpretation
+
+We can interpret the set of feasible $y$ as follows.
+
+::: {aside}
+
+Recall the LP @lp-example.
+
+$$\text{maximize} \quad & x_1 + 6x_2  \\
+\text{subject to} \quad
+& x_1   &\leq 20\\
+&  x_2  &\leq 30\\
+& x_1 +  x_2  &\leq 40\\
+& x \geq 0$$
+
+:::
+
+The objective vector of LP @lp-example is $(1,6)$, and its constraint
+matrix is
+$$\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+1 & 1
+\end{bmatrix}$$
+where each row corresponds to a constraint and the row vector represents
+the coefficients of the LHS of the corresponding constraint. For
+example, row vector $(1,1)$ corresponds to the constraint
+$x_1 + x_2 \leq 40$.
+
+The set of feasible dual solutions $y$ are those that correspond to
+linear combinations of the row vectors such that the resulting vector is
+at least the objective vector, coordinatewise:
+$$y_1(1,0) + y_2 (0,1) + y_3 (1,1) \geq (1,6).$$
+
+:::: {figure}
+
+::: {image width=75%} ./lp-viz-dual.png
+
+:::
+
+Illustration of the dual problem. The black vector is the objective
+vector, the others are constraint vectors.
+
+::::
 
 ## Duals in General
 
