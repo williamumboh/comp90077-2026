@@ -264,7 +264,7 @@ primal-dual pair, the optimal values of the primal and dual coincide.
 
 Let $x^*$ and $y^*$ be optimal solutions to LP @lp-max and its dual LP
 @lp-min, respectively. Then,
-$$\sum_{1 \leq j \leq n} a_j x^*_j \leq \sum_{1 \leq i \leq m} c_i y^*_i.$$
+$$\sum_{1 \leq j \leq n} a_j x^*_j = \sum_{1 \leq i \leq m} c_i y^*_i.$$
 
 :::
 
