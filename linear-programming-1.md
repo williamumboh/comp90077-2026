@@ -84,9 +84,9 @@ A *linear program* consists of:
 - a set of variables $x_1, \ldots, x_n$,
 - coefficients $a_1, \ldots, a_n$ for the objective,
 - a set of linear inequalities
-  $$   b_{11}x_1 + \ldots + b_{1n} &\leq c_1\\
+  $$   b_{11}x_1 + \ldots + b_{1n}x_n &\leq c_1\\
      &\vdots\\
-     b_{m1}x_1 + \ldots + b_{mn} &\leq c_m\\
+     b_{m1}x_1 + \ldots + b_{mn}x_n &\leq c_m\\
      $$
 
 The goal is to find an assignment of values to variables
