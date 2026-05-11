@@ -49,15 +49,15 @@ in the graph $G$ with edge lengths $x_e$.
 We first argue that $d$ is a feasible solution. We have
 $d_{uv} \leq d_{uw} + d_{wv}$ since the shortest path between $u$ and
 $v$ cannot be longer than going from $u$ to $w$ to $v$. The
-nonnegativity constraints are satisfied since the edge lengths $x_e$ are
-also nonnegative due to the nonnegativity constraints of
-$\operatorname{Metric-LP}$. The constraints of $\operatorname{Path-LP}$
-ensures that the shortest path between $s$ and $t$ is at least $1$ and
-so $d_{st} \geq 1$. Define a new solution $d'$ where
-$d'_{uv} = d_{uv}/d_{st}$ for every $u,v \in V$. We have that
-$d'_{st} = 1$ and $d'_{uv} \leq d_{uv}$ for every $u,v \in V$. Moreover,
-$d'$ also satisfies the triangle inequalities and the nonnegative
-constraints.
+nonnegativity constraints are satisfied: the edge lengths $x_e$ are
+nonnegative due to the nonnegativity constraints of
+$\operatorname{Path-LP}$ and so every path has nonnegative length. The
+constraints of $\operatorname{Path-LP}$ ensures that the shortest path
+between $s$ and $t$ is at least $1$ and so $d_{st} \geq 1$. Define a new
+solution $d'$ where $d'_{uv} = d_{uv}/d_{st}$ for every $u,v \in V$. We
+have that $d'_{st} = 1$ and $d'_{uv} \leq d_{uv}$ for every $u,v \in V$.
+Moreover, $d'$ also satisfies the triangle inequalities and the
+nonnegative constraints.
 
 Finally, to see that the LP cost of $d'$ is at most that of $x$, observe
 that for every $(u,v) \in E$, we have $d'_{uv} \leq d_{uv} \leq x_{uv}$
