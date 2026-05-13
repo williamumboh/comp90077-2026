@@ -80,12 +80,68 @@ Derive the dual linear program.
 
 :::
 
+::: {solution class=dropdown} ex-9-3
+
+Following the usual recipe for deriving duals, we first introduce a dual
+variable $y_j$ for each primal constraint $\sum_{i \in I_j} x_i \geq 1$.
+The coefficient of $y_j$ in the dual objective is $1$ since the RHS of
+the corresponding primal constraint is $1$. Thus, the dual objective is
+$\sum_{j \in [m]} y_j$.
+
+Next, for each primal variable $x_i$, we introduce a dual constraint
+$\sum_{j : I_j \ni i} y_j \leq 1$. The RHS is the coefficient of $x_i$
+in the primal objective, which is $1$. The LHS is because the primal
+variable $x_i$ appears in primal constraints $j$ such that $I_j \ni i$
+with coefficient $1$.
+
+Thus, the dual LP is:
+
+$$\begin{align}
+\text{maximize} \quad & \sum_j y_j\\
+\text{subject to} \quad & \sum_{j : I_j \ni i} y_j \leq 1 \quad  && \forall i \in [n]\\
+& y_j \geq 0 \quad  && \forall j \in [m]
+\end{align}$$
+
+Observe that this is exactly the LP for [Disjoint
+Intervals](#prob-disjoint-intervals) we derived in [Tutorial 6 Exercise
+3](#ex-6-3), and so these problems are dual to each other.
+
+:::
+
 ::: {exercise label=ex-9-6}
 
 Derive the dual for the weighted vertex cover LP
-$$\text{minimize} \quad & \sum_v w_vy_v\\
+
+$$\begin{align}
+\text{minimize} \quad & \sum_v w_vy_v\\
 \text{subject to} \quad & y_u + y_v \geq 1 \quad  && \forall (u,v) \in E\\
-& y\geq 0$$
+& y\geq 0
+\end{align}$$
+
+:::
+
+::: {solution class=dropdown} ex-9-6
+
+For each primal constraint $y_u + y_v \geq 1$, we introduce a dual
+variable $x_e$ where $e = (u,v)$. The coefficient of $x_e$ in the dual
+objective is $1$ since the RHS of the corresponding primal constraint is
+$1$. Thus, the dual objective is $\sum_{e \in E} x_e$.
+
+Next, for each primal variable $y_v$, we introduce a dual constraint
+$\sum_{e \in \delta(v)} y_e \leq w_v$. The RHS is the coefficient of
+$x_i$ in the primal objective, which is $w_v$. The LHS is because for
+each primal variable $y_v$, it appears in the primal constraints
+$e \in \delta(v)$ with coefficient $1$.
+
+$$\begin{align}
+\text{maximize} \quad & \sum_{e \in E} x_e\\
+\text{subject to} \quad & \sum_{e \in \delta(v)} y_e \leq w_v \quad  && \forall (u,v) \in E\\
+& x\geq 0
+\end{align}$$
+
+This corresponds to a "capacitated" variant of the matching problem
+where each vertex $v$ has a capacity $w_v$ and can be incident to at
+most $w_v$ edges.
 
 :::
 
@@ -97,6 +153,34 @@ $$\text{minimize} \quad & \sum_{e \in E} c_ex_e\\
 \text{subject to} \quad & \sum_{e \in P} x_e \geq 1 \quad  && \forall P \in \mathcal{P}_{s,t}\\
 & x \geq 0 \quad$$
 
+Recall that $\mathcal{P}_{s,t}$ is the set of $(s,t)$-paths.
+
+:::
+
+::: {solution class=dropdown} ex-9-4
+
+For each primal constraint $\sum_{e \in P} x_e \geq 1$, we introduce a
+dual variable $y_P$. In other words, we have a dual variable for each
+$P \in \mathcal{P}_{s,t}$. The coefficient of $y_P$ in the dual
+objective is $1$ since the RHS of the corresponding primal constraint is
+$1$. Thus, the dual objective is $\sum_{P \in \mathcal{P}_{s,t}} y_P$.
+
+Next, for each primal variable $x_e$, we introduce a dual constraint
+$\sum_{P \in \mathcal{P}_{s,t} : P \ni e} y_P \leq c_e$. The RHS is the
+coefficient of $x_e$ in the primal objective, which is $1$. The LHS is
+because each primal variable $x_e$ appears with coefficient $1$ in the
+primal constraints $P \in \mathcal{P}_{s,t}$ such that $e \in P$.
+
+$$\begin{align}
+\text{maximize} \quad & \sum_{P \in \mathcal{P}_{s,t}} y_P\\
+\text{subject to} \quad &  \sum_{P \in \mathcal{P}_{s,t} : P \ni e} y_P \leq c_e \quad  && \forall (u,v) \in E\\
+& y\geq 0
+\end{align}$$
+
+This corresponds to the Max-Flow problem where we want to sent as much
+flow from $s$ to $t$ along paths subject to capacity constraints on the
+edges.
+
 :::
 
 ::: {exercise label=ex-9-5}
@@ -104,11 +188,14 @@ $$\text{minimize} \quad & \sum_{e \in E} c_ex_e\\
 Derive the dual for the following variant of the
 $\operatorname{Metric-LP}$ relaxation for [Min
 $(s,t)$-Cut](#prob-st-cut).
-$$\text{minimize} \quad & \sum_{(u,v) \in E} c_{uv}d_{uv}\\
+
+$$\begin{align}
+\text{minimize} \quad & \sum_{(u,v) \in E} c_{uv}d_{uv}\\
 \text{subject to} \quad
 & d_{st} \geq 1 \quad  && \\
 & d_{uv} \leq d_{uw} + d_{vw} && \forall u,v,w \in V\\
-& d \geq 0$$
+& d \geq 0
+\end{align}$$
 
 :::
 
