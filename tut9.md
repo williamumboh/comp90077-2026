@@ -185,6 +185,9 @@ edges.
 
 ::: {exercise label=ex-9-5}
 
+*Note: The dual is much messier than originally thought. Please ignore
+this question.*
+
 Derive the dual for the following variant of the
 $\operatorname{Metric-LP}$ relaxation for [Min
 $(s,t)$-Cut](#prob-st-cut).
