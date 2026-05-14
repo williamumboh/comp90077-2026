@@ -54,6 +54,12 @@ project:
         - file: lp.md
         - file: lp-duality.md
         - file: tut9.md
+    - title: Week 10 Dual-Fitting and Primal-Dual
+      children:
+        - file: dual-fitting-setcover.md
+        - file: primal-dual.md
+        - file: pd-shortest-paths.md
+        - file: pd-mst.md
    
 
   # github:
