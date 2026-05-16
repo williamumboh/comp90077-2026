@@ -60,6 +60,7 @@ project:
         - file: primal-dual.md
         - file: pd-shortest-paths.md
         - file: pd-mst.md
+        - file: tut10.md
     - file: a2.md
 
    

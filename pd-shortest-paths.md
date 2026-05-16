@@ -100,8 +100,8 @@ $v$ to $S$.
 See pages 31 - 48 of [Annotated Slides](./slides-post-w10.pdf) for a
 step-by-step illustration of the algorithm.
 
-Let us now analyze the cost of the algorithm. The primal complementary
-slackness conditions are:
+Let us now show that $P$ is the shortest path via complementary
+slackness conditions. The primal complementary slackness conditions are:
 
 $$\begin{equation}
 \label{eq:shortest-path:primal-cs}
@@ -126,7 +126,7 @@ satisfies primal and dual complementary slackness conditions.
 
 :::
 
-::: {prf:proof enumerated=false}
+::::: {prf:proof enumerated=false}
 
 Since $P$ is a subset of $T$ and we only add $e$ to $T$ if
 $\sum_{S : e \in S_i} y_S = c_e$, primal complementary slackness
@@ -136,6 +136,20 @@ Suppose, towards a contradiction, that dual complementary slackness is
 not satisfied. Let $S$ be such that $y_S > 0$ and
 $|P \cap \delta(S)| > 1$. We have that the path $P$ left $S$, reentered
 $S$ and then left again, possibly reentering and leaving multiple times.
+See @fig-shortest-path-cs.
+
+:::: {figure label=fig-shortest-path-cs}
+
+::: {image width=75%} ./shortest-path-moat-cs.png
+
+:::
+
+Illustration of the argument that if $|P \cap \delta(S)| > 1$, then
+there must be at least one edge in $T$ that enters $S$. In this example,
+the shaded region is $S$, the bold edges are edges of $T$, and the edge
+$(4,3)$ is the edge of $T$ entering $S$.
+
+::::
 
 Consider the iteration in which the algorithm grew $y_S$. At the start
 of the iteration, there were no edges in $T$ leaving $S$, and at the end
@@ -144,4 +158,4 @@ future iteration, the algorithm grows a moat $S'$ containing $S$ and
 adds an edge leaving $S'$. Thus, it is not possible for an edge to be
 added that goes into $S$, a contradiction.
 
-:::
+:::::
