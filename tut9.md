@@ -173,38 +173,12 @@ primal constraints $P \in \mathcal{P}_{s,t}$ such that $e \in P$.
 
 $$\begin{align}
 \text{maximize} \quad & \sum_{P \in \mathcal{P}_{s,t}} y_P\\
-\text{subject to} \quad &  \sum_{P \in \mathcal{P}_{s,t} : P \ni e} y_P \leq c_e \quad  && \forall (u,v) \in E\\
+\text{subject to} \quad &  \sum_{P \in \mathcal{P}_{s,t} : P \ni e} y_P \leq c_e \quad  && \forall e \in E\\
 & y\geq 0
 \end{align}$$
 
 This corresponds to the Max-Flow problem where we want to sent as much
 flow from $s$ to $t$ along paths subject to capacity constraints on the
 edges.
-
-:::
-
-::: {exercise label=ex-9-5}
-
-*Note: The dual is much messier than originally thought. Please ignore
-this question.*
-
-Derive the dual for the following variant of the
-$\operatorname{Metric-LP}$ relaxation for [Min
-$(s,t)$-Cut](#prob-st-cut).
-
-$$\begin{align}
-\text{minimize} \quad & \sum_{(u,v) \in E} c_{uv}d_{uv}\\
-\text{subject to} \quad
-& d_{st} \geq 1 \quad  && \\
-& d_{uv} \leq d_{uw} + d_{vw} && \forall u,v,w \in V\\
-& d \geq 0
-\end{align}$$
-
-:::
-
-::: {hint class=dropdown}
-
-First transform the inequalities so that they are all $\geq$ and the
-variables are all on the LHS.
 
 :::
