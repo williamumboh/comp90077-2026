@@ -6,6 +6,7 @@ Structures!
 # Shortcuts
 
 - @sec-schedule
+- @sec-a2 **Due: 30 May 17:00**
 - Current week's notes: @sec-dual-fitting-setcover, @sec-primal-dual,
   @sec-pd-shortest-paths, @sec-pd-mst, [Annotated
   Slides](./slides-post-w10.pdf)
