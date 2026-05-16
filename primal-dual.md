@@ -156,9 +156,9 @@ implies
 
 $$\begin{align*}
 \sum_{j : x^*_j > 0} a_j x^*_j
-&= \sum_{j : x^*_j > 0} \left(\sum_{1 \leq i \leq m} y^*_i\right) x^*_j \\
-&= \sum_{j : x^*_j > 0} \left(\sum_{i : y^*_i > 0} y^*_i\right) x^*_j \\
-&= \sum_{i : y^*_i > 0} \left(\sum_{j : x^*_j > 0} x^*_j\right)y^*_i,
+&= \sum_{j : x^*_j > 0} \left(\sum_{1 \leq i \leq m} b_{ij}y^*_i\right) x^*_j \\
+&= \sum_{j : x^*_j > 0} \left(\sum_{i : y^*_i > 0} b_{ij}y^*_i\right) x^*_j \\
+&= \sum_{i : y^*_i > 0} \left(\sum_{j : x^*_j > 0} b_{ij}x^*_j\right)y^*_i,
 \end{align*}$$
 
 where the last equality follows by swapping the order of summation.
@@ -166,7 +166,7 @@ where the last equality follows by swapping the order of summation.
 Dual complementary slackness conditions (see @thm-CS) gives
 
 $$\begin{align*}
-\sum_{i : y^*_i > 0} \left(\sum_{j : x^*_j > 0} x^*_j\right)y^*_i
+\sum_{i : y^*_i > 0} \left(\sum_{j : x^*_j > 0} b_{ij}x^*_j\right)y^*_i
 = \sum_{i : y^*_i > 0} c_i y^*_i\\
 = \sum_{1 \leq i \leq m} c_i y^*_i,
 \end{align*}$$
@@ -299,7 +299,7 @@ The LP for a covering problem has the following form
 
 $$\begin{align*}
 \text{minimize} \quad & \sum_{1 \leq i \leq n} c_i x_i\\
-\text{subject to} \quad & \sum_{1 \leq i \leq n} b_{ij} x_i \geq d_j && \forall 1 \leq i \leq m\\
+\text{subject to} \quad & \sum_{1 \leq i \leq n} b_{ij} x_i \geq d_j && \forall 1 \leq j \leq m\\
 & x \geq 0
 \end{align*}$$
 
