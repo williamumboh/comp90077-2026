@@ -3,18 +3,28 @@
 # Tutorial 10
 
 In this tutorial, we will explore the power of the primal-dual method.
-In the first two exercises, we will reinterpret the greedy algorithm for
-Interval Hitting Set in @sec-tut5 as a primal-dual algorithm. In the
-remaining exercises, we will see that the primal-dual method generalizes
-Dijkstra's and Kruskal's in the sense that it is able to handle the
-Steiner Tree problem, which generalizes shortest-path and minimum
-spanning tree.
+In the first exercise, we will reinterpret the greedy algorithm for
+Interval Hitting Set in @sec-tut5 as a primal-dual algorithm. Then, we
+will extend it to handle Weighted Interval Hitting Set. Finally, we
+explore further properties of the cut constraint LP.
+
+The *Weighted Interval Hitting Set Problem* is as follows. We are given
+as input a set of weights $w_i$ for each integer $1 \leq i \leq n$, and
+a collection of intervals $I_1, \ldots, I_m$ where each interval
+$I_j = [a_j, b_j]$ is such that $a_j$ and $b_j$ are integers satisfying
+$1 \leq a_j \leq b_j \leq n$. An integer subset
+$S \subseteq \{1, \ldots, n\}$ is a *hitting set* if
+$I_j \cap S \neq \emptyset$ for every interval $I_j$. That is, every
+interval contains some integer in $S$. The goal is to find a hitting set
+$S$ with minimum total weight $w(S)$.
+
+The [Interval Hitting Set Problem](#prob-interval-hitting) is the
+special case when the weights are $1$.
 
 ::: {exercise label=ex-10-1}
 
-Give a primal-dual exact algorithm for the [Interval Hitting Set
-problem](#prob-interval-hitting) using the primal and dual LPs in
-[Tutorial 9](#ex-9-3).
+Give a primal-dual exact algorithm for the Interval Hitting Set Problem
+using the primal and dual LPs in [Tutorial 9](#ex-9-3).
 
 :::
 
@@ -28,6 +38,28 @@ primal-dual algorithm.
 
 ::: {exercise label=ex-10-2}
 
+Write the primal and dual LPs for the Weighted Interval Hitting Set
+Problem.
+
+:::
+
+::: {exercise label=ex-10-3}
+
+Give a primal-dual 2 approximation algorithm for the Weighted Interval
+Hitting Set Problem.
+
+:::
+
+::: {hint class=dropdown}
+
+Just as for the shortest path problem, we cannot take the hitting set to
+be all integers $i$ that correspond to tight dual constraints, and we
+will need to be careful which ones we take.
+
+:::
+
+::: {exercise label=ex-10-4}
+
 Recall the cut constraint LP for MST.
 
 $$\begin{align*}
@@ -36,30 +68,26 @@ $$\begin{align*}
 & x \geq 0
 \end{align*}$$
 
-Show that the cut constraint LP has an integrality gap of $2$ for MST.
+Show that the cut constraint LP has an integrality gap of $2(1-1/n)$ for
+MST.
 
 :::
 
-::: {exercise label=ex-10-3}
+::: {hint class=dropdown}
 
-The *Steiner Tree problem* is a generalization of the MST. In the
-Steiner tree problem, we are given a graph $G=(V,E)$ with edge costs
-$c_e$ and a set of terminals $S \subseteq V$. The goal is to find a
-min-cost subgraph $F$ that connects the terminals, i.e. for every pair
-of terminals $t,t' \in S$, there is a $(t,t')$-path in $F$.
-
-The Steiner tree problem generalizes the shortest-path and the minimum
-spanning tree problems as follows. When $X = (s,t)$, then the problem is
-exactly the shortest $(s,t)$-path problem, and when $X=V$, it is exactly
-the minimum spanning tree problem.
-
-Write a linear program using cut constraints.
+First show that it has integrality gap of $3/2$ for $n=3$.
 
 :::
 
-::: {exercise label=ex-10-4}
+::: {exercise label=ex-10-5}
 
-Design a 2 approximation algorithm for the Steiner Tree problem using
-the primal-dual method.
+Give an efficient separation oracle for the cut constraint LP.
+
+:::
+
+::: {hint class=dropdown}
+
+Use the fact that [Min $(s,t)$-Cut](#prob-st-cut) has a polynomial-time
+exact algorithm.
 
 :::
