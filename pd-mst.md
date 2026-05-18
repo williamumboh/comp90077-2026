@@ -52,9 +52,9 @@ $$\begin{align*}
 ### Interpretation of Dual
 
 Let $\Pi = (S_1, \ldots, S_k)$. Extending on the interpretation of cut
-constraints as a \[\[#sec-moat-interpretation\]\[moat-packing\], the
-dual variable $y_\Pi$ can be thought of as placing a moat of width
-$y_\Pi/2$ around each part $S_i$ of $\Pi$.
+constraints as a [moat-packing](#sec-moat-interpretation), the dual
+variable $y_\Pi$ can be thought of as placing a moat of width $y_\Pi/2$
+around each part $S_i$ of $\Pi$.
 
 To see that a feasible dual $y$ is a lower bound on the cost of the MST,
 suppose that $y_\Pi > 0$ only when $\Pi = \Pi'$ for some $\Pi'$. Then,
