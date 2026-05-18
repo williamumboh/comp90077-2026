@@ -25,7 +25,8 @@ $$\begin{align*}
 & x \geq 0
 \end{align*}$$
 
-Unfortunately, this LP has an integrality gap of 2.
+Unfortunately, this LP has an integrality gap of 2 ([Tutorial 10
+Exercise 4](#ex-10-4)).
 
 A stronger LP is one that uses partition constraints. Let
 $\Pi = (S_1, \ldots, S_k)$ be a partition of $V$, i.e. the sets $S_i$
@@ -47,6 +48,36 @@ $$\begin{align*}
 \text{subject to} \quad & \sum_{\Pi : e \in \delta(\Pi)} y_\Pi \leq c_e && \forall e \in E\\
 & y \geq 0
 \end{align*}$$
+
+### Interpretation of Dual
+
+Let $\Pi = (S_1, \ldots, S_k)$. Extending on the interpretation of cut
+constraints as a \[\[#sec-moat-interpretation\]\[moat-packing\], the
+dual variable $y_\Pi$ can be thought of as placing a moat of width
+$y_\Pi/2$ around each part $S_i$ of $\Pi$.
+
+To see that a feasible dual $y$ is a lower bound on the cost of the MST,
+suppose that $y_\Pi > 0$ only when $\Pi = \Pi'$ for some $\Pi'$. Then,
+the dual feasibility constraints imply that every edge
+$e \in \delta(\Pi')$ has cost $c_e \geq y_{\Pi'}$. Since a spanning tree
+$T$ has to contain at least $|\Pi'|-1$ edges from $\delta(\Pi')$, the
+spanning tree $T$ has cost at least $(|\Pi'|-1)c_e$. See
+@fig-partition-width for an illustration.
+
+:::: {figure label=fig-partition-width}
+
+::: {image width=75%} ./partition-width.png
+
+:::
+
+In this example, $\Pi' = (\{s,2,6,7\},\{4,5\},\{3,t\})$, $y_{\Pi'} = 16$
+and
+$\delta(\Pi') = \{(2,3), (6,3), (6,5),(7,5),(7,t),(5,t),(5,3),(4,3),(4,t)\}$.
+Every edge in $\delta(\Pi')$ has cost at least $y_{\Pi'}$. Observe that
+the MST has to choose at least $|\Pi'| - 1 = 2$ edges from
+$\delta(\Pi')$ and thus has total cost at least 32.
+
+::::
 
 ## Simultaneous Moat-Growing
 

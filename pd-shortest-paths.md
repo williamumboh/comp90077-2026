@@ -35,13 +35,45 @@ $$\begin{align*}
 \end{align*}$$
 
 $$\begin{align*}
+\label{w10-moat-packing-dual}
 \text{maximize} \quad & \sum_{S \in \mathcal{C}} y_S\\
 \text{subject to} \quad & \sum_{S : e \in \delta(S)} y_S \leq c_e && \forall e \in E\\
 & y \geq 0
 \end{align*}$$
 
-Intuitively, we think of the dual as a "moat packing", where we are
-placing a moat around $S$ of width $y_S$.
+(sec-moat-interpretation)=
+
+### Interpretation of Dual
+
+Whenever we derive the dual of an LP, it is useful to try and think of
+an intuitive interpretation and why the dual gives a lower bound on the
+optimal integral solution. In this case, we think of the dual LP
+@w10-moat-packing-dual as a "moat packing", where for each
+$S \in \mathcal{C}$, we are placing a moat around $S$ of width $y_S$.
+
+To get some intuition as to why a feasible dual gives a lower bound on
+the shortest $(s,t)$-path, suppose that we have a feasible dual in which
+exactly one variable is positive, i.e. $y_R > 0$ for some
+$R \in \mathcal{C}$ and $y_S = 0$ for $S \in \mathcal{C}$ where
+$S \neq R$. The value of the dual is exactly $y_R$. Then, the dual
+feasibility constraints imply that $y_R \leq c_e$ for every
+$e \in \delta(R)$, i.e. every edge $e \in \delta(R)$ has cost
+$c_e \geq y_R$. Since every $(s,t)$-path has to cross the $(s,t)$-cut
+$R$ at least once, it has to contain at least one edge of $\delta(R)$
+and thus costs at least $y_R$. Therefore, $y_R$ is indeed a lower bound
+on the cost of the shortest $(s,t)$-path. See @fig-moat-width for an
+illustration.
+
+:::: {figure label=fig-moat-width}
+
+::: {image width=75%} ./moat-width.png
+
+:::
+
+In this example, $R = \{s,2,6,7\}$, $y_R = 17$, and
+$\delta(R) = \{(2,3), (6,3), (6,5),(7,5),(7,t)\}$.
+
+::::
 
 ## Which Dual Variables to Raise?
 
@@ -97,8 +129,12 @@ $v$ to $S$.
 
 :::
 
+::: {aside}
+
 See pages 31 - 48 of [Annotated Slides](./slides-post-w10.pdf) for a
 step-by-step illustration of the algorithm.
+
+:::
 
 Let us now show that $P$ is the shortest path via complementary
 slackness conditions. The primal complementary slackness conditions are:
