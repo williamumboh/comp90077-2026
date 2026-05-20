@@ -36,7 +36,7 @@ primal-dual algorithm.
 
 :::
 
-:::: {solution class=dropdown} ex-10-1
+::::: {solution class=dropdown} ex-10-1
 
 Recall that the primal LP is
 
@@ -118,8 +118,16 @@ induction.
 
 Thus, we get that and so for each interval $I_j$ with $y_j > 0$, exactly
 one integer of $I_j$ is added to $S$, namely its right endpoint $b_j$.
-This completes the proof that dual complementary slackness conditions
-are satisfied.
+(See figure below for an illustration of the argument.) This completes
+the proof that dual complementary slackness conditions are satisfied.
+
+:::: {figure}
+
+::: {image width=100%} ./tut10-pd-unweighted.png
+
+:::
+
+::::
 
 Finally, the dual solution $y$ is also feasible since in each iteration,
 we stop raising $y_j$ once a dual constraint involving it is tight, and
@@ -136,7 +144,7 @@ $w_i$ and do not need to be the same for every $i$.
 
 :::
 
-::::
+:::::
 
 ::: {exercise label=ex-10-2}
 
@@ -186,7 +194,7 @@ will need to be careful which ones we take.
 
 :::
 
-:::: {solution class=dropdown} ex-10-3
+::::: {solution class=dropdown} ex-10-3
 
 For this problem, the above algorithm @alg-pd-interval-hitting does not
 always satisfy dual complementary slackness. To get around this, we add
@@ -249,12 +257,27 @@ Since $I_k$ is not strictly contained in $I_j$, we have that either
 $a_j \in I_k$ or $b_j \in I_k$. Therefore, $I_k$ contains either the
 leftmost or rightmost integer of $S' \cap I_j$. Since $k$ is neither one
 of these, we get that $k$ could have been removed from $S'$ and $I_k$
-would still have been satisfied, a contradiction.
+would still have been satisfied, a contradiction. See below figure for
+an illustration of the argument.
+
+:::: {figure}
+
+::: {image width=100%} ./tut10-pd-weighted.png
+
+:::
+
+If $|S' \cap I_j|>2$, choose an interior point $k \in S' \cap I_j$.
+Since $I_k$ is not strictly contained in $I_j$, it must contain either
+$a_j$ or $b_j$, hence also the leftmost or rightmost point of
+$S'\cap I_j$. Therefore removing $k$ would still satisfy $I_k$,
+contradicting minimality of $S'$.
+
+::::
 
 We conclude that the 2-approximate dual complementary slackness
 conditions are satisfied.
 
-::::
+:::::
 
 ::: {exercise label=ex-10-4}
 
@@ -277,20 +300,36 @@ First show that it has integrality gap of $3/2$ for $n=3$.
 
 :::
 
-::: {solution class=dropdown} ex-10-4
+::::: {solution class=dropdown} ex-10-4
 
 Consider the cycle graph $G$ on 3 vertices: $V = \{1, 2, 3\}$ and
 $E = \{(1,2),(2,3),(1,3)\}$. Every edge has cost $c_e = 1$. The MST
 takes two edges for a cost of 2. On the other hand, there is a feasible
 LP solution with cost at most $3/2$: $x_e = 1/2$ for every edge
-$e \in E$.
+$e \in E$. See figure below for an illustration.
+
+:::: {figure}
+
+::: {image width=40% label=fig1} ./tut10-int-gap-graph.png
+
+:::
+
+::: {image width=100% label=fig2} ./tut10-int-gap.png
+
+:::
+
+@fig1 illustrates the graph $G$ and edge costs. The left figure of @fig2
+illustrates the LP solution and the right figure illustrates that the
+cut constraint for $S = \{2\}$ is satisfied.
+
+::::
 
 To generalize this to $n$ vertices, consider the cycle graph on $n$
 vertices. Every edge has cost $c_e=1$. The MST takes $n-1$ edges for a
 cost of $n-1$. On the other hand, there is a feasible LP solution with
 cost at most $n/2$ which sets $x_e = 1/2$ for every edge $e \in E$.
 
-:::
+:::::
 
 ::: {exercise label=ex-10-5}
 
