@@ -355,7 +355,7 @@ exact algorithm.
 
 :::
 
-::: {solution class=dropdown} ex-10-5
+::::: {solution class=dropdown} ex-10-5
 
 A solution $x$ is infeasible if and only if there exists a vertex subset
 $\emptyset \subsetneq S^* \subsetneq V$ such that
@@ -364,7 +364,15 @@ $\emptyset \subsetneq S^* \subsetneq V$, there exist vertices $s \in S$
 and $t \notin S$. Consider the Min $(s,t)$-Cut instance with graph $G$
 and edge costs $x_e$. Then, $\sum_{S^* : e \in \delta(S^*)} x_e$ is
 exactly the cost of the $(s,t)$-cut $S^*$ and so the cost of the optimal
-cut is less than 1.
+$(s,t)$-cut is less than 1. See below figure for an illustration.
+
+:::: {figure}
+
+::: {image width=75%} ./tut10-sep-oracle.png
+
+:::
+
+::::
 
 Thus, $x$ is infeasible if and only if there exist vertices $s,t$ such
 that the cost of the optimal solution to the Min $(s,t)$-Cut instance
@@ -374,4 +382,4 @@ instance for every pair $s,t \in V$. Since there are $O(n^2)$ pairs and
 Min $(s,t)$-Cut can be solved in polynomial time, we get an efficient
 separation oracle.
 
-:::
+:::::
