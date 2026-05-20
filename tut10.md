@@ -18,6 +18,17 @@ $I_j \cap S \neq \emptyset$ for every interval $I_j$. That is, every
 interval contains some integer in $S$. The goal is to find a hitting set
 $S$ with minimum total weight $w(S)$.
 
+:::: {figure}
+
+::: {image width=100%} ./tut10-interval.png
+
+:::
+
+Chosen hitting set $S=\{3,7\}$ with total weight 2. Every interval
+contains at least one selected integer.
+
+::::
+
 The [Interval Hitting Set Problem](#prob-interval-hitting) is the
 special case when the weights are $1$.
 
