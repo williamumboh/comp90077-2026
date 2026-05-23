@@ -62,6 +62,10 @@ project:
         - file: pd-mst.md
         - file: tut10.md
     - file: a2.md
+    - title: Week 11 Online Algorithms
+      children:
+        - file: online-intro.md
+        - file: online-set-cover.md
 
    
 
