@@ -66,6 +66,7 @@ project:
       children:
         - file: online-intro.md
         - file: online-set-cover.md
+        - file: tut11.md
 
    
 
