@@ -228,7 +228,7 @@ Intuitively, the worst case is when the tram arrives immediately after
 we decide to walk, i.e. $x = t$. Indeed, when $x=t$, the algorithm's
 total cost is $t + W$; on the other hand, by @lem-rob-opt, the optimal
 offline cost is $\min\{x,W\} = \min\{t,W\}$. By an averaging argument,
-we get that $\min\{t,W\} \leq t+W$.
+we get that $\min\{t,W\} \leq (t+W)/2$.
 
 :::
 
@@ -244,7 +244,7 @@ picking a *random* threshold, we gain some advantage over the adversary.
 ::: {prf:theorem label=thm-rob-rand}
 
 There is a randomized algorithm with expected competitive ratio
-\$`\frac{e}{e-1}`{=latex}=1.58…\$ for the Tram Waiting Problem.
+$\frac{e}{e-1}=$ 1.58… for the Tram Waiting Problem.
 
 :::
 
