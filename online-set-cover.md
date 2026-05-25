@@ -174,8 +174,8 @@ follows:
   - the next element $e_j$ that arrives is contained in every unmarked
     set
   - let $k$ be the number of unmarked sets
-  - after the algorithm updates its $x$ variables, every set $S_i$ with
-    $x_i \geq 1/k$ is marked
+  - after the algorithm updates its $x$ variables, mark an arbitrary set
+    $S_i$ with $x_i \geq 1/k$
 
 We now show that the competitive ratio of the algorithm is at least
 $\Omega(\log m)$ by showing that there is one set that contains all the
@@ -189,7 +189,7 @@ $e_1,\ldots, e_{k-1}$. Thus, optimal fractional solution has cost 1.
 We now show that $\sum_{i \in [m]} x_i \geq \sum_{i \in [m]} 1/i$.
 Re-index the sets so that $S_i$ is the $i$-th set to be marked by the
 adversary. Thus, at the start of the timestep in which $S_i$ was marked,
-at most $i-1$ sets were marked, and so $x_i \geq 1/(m-i-1)$. Therefore,
+at most $i-1$ sets were marked, and so $x_i \geq 1/(m-i+1)$. Therefore,
 $$\sum_{i \in [m]} x_i \geq \sum_{i \in [m]} \frac{1}{m-i-1} = H_m = \Omega(\log m).$$
 
 :::
