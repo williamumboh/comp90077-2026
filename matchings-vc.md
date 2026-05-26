@@ -206,6 +206,8 @@ edges of $F$. Therefore, if $M$ is a matching, then $|C| \geq |M|$.
 
 :::
 
+(sec-greedy-matching-vc)=
+
 ## Greedy Approximation Algorithm
 
 We now use @thm-matching-vc-duality to show that the [Greedy
