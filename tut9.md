@@ -103,7 +103,7 @@ $$\begin{align}
 \end{align}$$
 
 Observe that this is exactly the LP for [Disjoint
-Intervals](#prob-disjoint-intervals) we derived in [Tutorial 6 Exercise
+Intervals](#prob-interval-disjoint) we derived in [Tutorial 6 Exercise
 3](#ex-6-3), and so these problems are dual to each other.
 
 :::

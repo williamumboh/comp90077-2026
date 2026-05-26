@@ -68,7 +68,6 @@ project:
         - file: online-set-cover.md
         - file: tut11.md
 
-   
 
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"

@@ -90,7 +90,7 @@ singletons (since every vertex is isolated when $T$ is empty).
 We say that an edge $e$ is tight if
 $\sum_{\Pi : e \in \delta(\Pi)} y_\Pi = c_e$.
 
-::: {prf:algorithm label=alg-pd-shortest-path}
+::: {prf:algorithm label=alg-pd-mst}
 
 - Initialize $T = \emptyset$ and $y = 0$
 - **while** $T$ not spanning **do**

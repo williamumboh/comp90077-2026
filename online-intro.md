@@ -310,8 +310,8 @@ Bipartite Matching.
 
 Since greedy adds an edge to its matching whenever it can, its matching
 $M$ is a maximal matching. We can then use the fact that [every maximal
-matching is a $(1/2)$ approximation](#thm-maximal-matching) to get the
-theorem.
+matching is a $(1/2)$ approximation](#thm-maximal-matching-approx) to
+get the theorem.
 
 :::
 
