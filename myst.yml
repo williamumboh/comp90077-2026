@@ -85,6 +85,7 @@ site:
   options:
     logo_text: COMP90077
     robots: disallow
+    analytics_plausible: williamumboh.com
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
