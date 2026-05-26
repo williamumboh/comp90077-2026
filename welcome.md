@@ -6,7 +6,7 @@ Structures!
 # Shortcuts
 
 - @sec-schedule
-- @sec-a2 **Due: 30 May 17:00**
+- @sec-a2 **Due: 30 May 23:59**
 - Current week's notes: @sec-online-intro, @sec-online-set-cover,
   [Annotated Slides](./slides-post-w11.pdf)
 - Current week's tutorial: @sec-tut11
