@@ -7,9 +7,8 @@ Structures!
 
 - @sec-schedule
 - @sec-a2 **Due: 30 May 23:59**
-- Current week's notes: @sec-online-intro, @sec-online-set-cover,
-  [Annotated Slides](./slides-post-w11.pdf)
-- Current week's tutorial: @sec-tut11
+- Current week's notes: [Annotated Slides](./slides-post-w12.pdf)
+- Current week's tutorial: No tutorial
 
 # Subject Overview
 
@@ -66,7 +65,7 @@ The subject is divided roughly into 3 parts:
 | W9: 4/5 - 8/5 | @sec-lp, @sec-lp-duality, [Annotated Slides](./slides-post-w9.pdf) | @sec-tut9 |
 | W10: 11/5 - 15/5 | @sec-dual-fitting-setcover, @sec-primal-dual, @sec-pd-shortest-paths, @sec-pd-mst, [Annotated Slides](./slides-post-w10.pdf) | Assignment 2 released on May 14, @sec-tut10 |
 | W11: 18/5 - 22/5 | @sec-online-intro,@sec-online-set-cover, [Annotated Slides](./slides-post-w11.pdf) | @sec-tut11 |
-| W12: 25/5 - 29/5 | Online Algorithms, Wrap Up | ****Assignment 2 deadline: May 30 23:59**** |
+| W12: 25/5 - 29/5 | Online Algorithms, Wrap Up, [Annotated Slides](./slides-post-w12.pdf) | ****Assignment 2 deadline: May 30 23:59**** |
 
 # Resources
 
