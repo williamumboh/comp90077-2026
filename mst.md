@@ -30,10 +30,10 @@ There are [4 greedy algorithms for
 MST](https://en.wikipedia.org/wiki/Minimum_spanning_tree#Classic_algorithms).
 We focus on Kruskal's algorithm, defined as follows.
 
-::: {prf:algorithm label=alg-kruskal} Kruskal's Algorithm
+::: {prf:algorithm label=alg-Kruskal} Kruskal's Algorithm
 
-- Initialize $S \leftarrow E$, sorted in decreasing order of weight, and
-  $F \leftarrow \emptyset$
+- Initialize $S \leftarrow E$, sorted in nondecreasing order of weight,
+  and $F \leftarrow \emptyset$
 - ****while**** $S \neq \emptyset$ and $F$ not spanning ****do****
   - Remove the minimum-weight edge $e$ from $S$
   - Add $e$ to $F$ if doing so does not create a cycle and discard $e$
