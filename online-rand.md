@@ -201,7 +201,7 @@ x_W(W)
 &= \left(1 + \frac{1}{W}\right)x_W(W-1) + \alpha \\
 &= \left(1 + \frac{1}{W}\right)x_W(W-2) + \left(1 + \frac{1}{W}\right)\alpha + \alpha\\
 &= \left(1+ \frac{1}{W}\right)^{W-1}\alpha + \ldots + \left(1 + \frac{1}{W}\right)\alpha + \alpha\\
-&= \alpha \sum_{i=0}^{W-1} \left(1 + \frac{1}{W}\right)^i
+&= \alpha \sum_{i=0}^{W-1} \left(1 + \frac{1}{W}\right)^i\\
 &= \alpha W \left(\left(1+ \frac{1}{W}\right)^W  - 1\right),
 \end{align*}$$
 
