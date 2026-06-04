@@ -17,6 +17,8 @@ make decisions over time, without complete knowledge of the future. In
 contrast, we call algorithms in the traditional model *offline
 algorithms*.
 
+(sec-tram-waiting)=
+
 ## Rent or Buy Problem
 
 The simplest online problem is the Rent or Buy Problem (aka Ski Rental).

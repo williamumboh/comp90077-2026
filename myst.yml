@@ -67,6 +67,9 @@ project:
         - file: online-intro.md
         - file: online-set-cover.md
         - file: tut11.md
+    - title: Week 12 Online Algorithms II
+      children:
+        - file: online-rand.md
 
 
   # github:
