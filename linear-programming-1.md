@@ -46,11 +46,11 @@ Let $G = (V,E)$ be graph. We have a Boolean variable $x_e$ for each edge
 $e \in E$. Assigning a value of $1$ to $x_e$ means we choose $e$ and
 assigning a value of $0$ means we do not. The number of edges we choose
 is $\sum_e x_e$. For each vertex $v \in V$, the constraint that at most
-one edge in $M$ is incident to $u$ is equivalent to the inequality
+one edge in $M$ is incident to $v$ is equivalent to the inequality
 $\sum_{e \text{ incident to } v} x_e \leq 1$.
 
-Thus, we can express maximum matching as follows. Let $\delta(v)$ =
-\\(u,v) ∈ E\\\$, the set of edges incident to $v$.
+Thus, we can express maximum matching as follows. Let
+$\delta(v) = \{(u,v) \in E\}$, the set of edges incident to $v$.
 $$\text{maximize} \quad & \sum_e x_e\\
 \text{subject to} \quad & \sum_{e \in \delta(v)} x_e \leq 1 \quad  && \forall v \in V\\
 & x_e \in \{0,1\} \quad  && \forall e \in E$$
