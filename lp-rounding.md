@@ -475,7 +475,7 @@ Let $C^*$ be the cost of the minimum $(s,t)$-cut. By @lem-cut-prob, we
 have
 $$\sum_i p_i c(S_i) = C^*.$$
 By optimality, we have that $c(S_i) \geq C^*$ for every
-$1 \leq i \leq n$. Therefore, we have that $c(S_i) \geq C^*$ for every
+$1 \leq i \leq n$. Therefore, we have that $c(S_i) = C^*$ for every
 $1 \leq i \leq n$.[^4]
 
 :::
