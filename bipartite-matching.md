@@ -208,7 +208,7 @@ We now show how to find a minimum vertex cover in bipartite graphs.
 Let $G$ be a bipartite graph and $M^*$ be a maximum matching. Let $L^*$
 and $R^*$ be the left and right endpoints of $M^*$, respectively. Let
 $Q$ be the set of vertices that are reachable via an alternating path
-from a vertex in $L$. Then,
+from a free vertex in $L$. Then,
 $$C^* = (L^* \setminus Q) \cup (R^* \cap Q)$$ is a minimum vertex cover
 of size $|C^*| = |M^*|$.
 

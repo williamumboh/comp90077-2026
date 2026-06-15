@@ -307,7 +307,7 @@ $2(1-1/n)$ for MST.
 
 ::: {hint class=dropdown}
 
-First show that it has integrality gap of $3/2$ for $n=3$.
+First show that it has integrality gap of $4/3$ for $n=3$.
 
 :::
 
