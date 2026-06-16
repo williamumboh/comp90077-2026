@@ -80,9 +80,9 @@ $\Pi$, let $X^*$ be optimal solution to the IP and $S^*$ be an optimal
 solution to $\Pi$. Then, $$\sum_{i \in S} w_i
 &= \sum_i w_iX_i \\
 &\leq \alpha \sum_i w_ix^*_i \\
-&\leq \sum_i w_i X^*_i\\
-&= \sum_{i \in S^*} w_i.$$ The second last line used @lem-relax and the
-last line used the equivalence of the IP and $\Pi$.
+&\leq \alpha \sum_i w_i X^*_i\\
+&= \alpha \sum_{i \in S^*} w_i.$$ The second last line used @lem-relax
+and the last line used the equivalence of the IP and $\Pi$.
 
 Typically, the way we find $X$ such that
 $$\sum_i w_iX_i \leq \alpha \sum_i w_ix^*_i.$$ is by finding $X$ such
@@ -96,7 +96,7 @@ The above discussion is summarized in the following lemma.
 
 Let $x^*$ be an optimal solution to the LP relaxation of an IP for a
 combinatorial optimization problem $\Pi$. If $X$ is an IP solution such
-that $X_i \leq \alpha x^*_i$ for every $i$, then the set $S$ where
+that $X_i \leq \alpha x^*_i$ for every $i$, then the solution $S$ where
 $i \in S$ if and only if $X_i = 1$ is an $α$-approximation for $\Pi$.
 
 :::
